@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Client Dashboard | Support Management System</title>
+
+    <!-- Google Font -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ===========================
+            SIDEBAR
+    ============================ -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            <img src="assets/images/logo.jpeg" alt="Logo">
+
+            <h2>SupportMS</h2>
+
+        </div>
+
+        <ul class="sidebar-menu">
+
+            <li class="active">
+                <a href="#">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-ticket"></i>
+                    My Tickets
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-plus"></i>
+                    Create Ticket
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-bell"></i>
+                    Notifications
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-user"></i>
+                    Profile
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-gear"></i>
+                    Settings
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- ===========================
+          MAIN CONTENT
+    ============================ -->
+
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input type="text" placeholder="Search tickets...">
+
+            </div>
+
+            <div class="topbar-right">
+
+                <i class="fa-solid fa-bell notification"></i>
+
+                <div class="profile">
+
+                    <img src="assets/images/profile.png" alt="Profile">
+
+                    <span>Ruhma</span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- WELCOME SECTION -->
+
+        <section class="welcome">
+
+            <h1>Welcome Back 👋</h1>
+
+            <p>
+
+                Manage your support requests and track tickets easily.
+
+            </p>
+
+        </section>
+
+        <!-- ==========================================
+     DASHBOARD CARDS
+========================================== -->
+
+<section class="dashboard-cards">
+
+    <div class="card">
+
+        <div class="card-icon red">
+            <i class="fa-solid fa-ticket"></i>
+        </div>
+
+        <div class="card-info">
+            <h3>12</h3>
+            <p>Open Tickets</p>
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <div class="card-icon orange">
+            <i class="fa-solid fa-clock"></i>
+        </div>
+
+        <div class="card-info">
+            <h3>4</h3>
+            <p>Pending Tickets</p>
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <div class="card-icon green">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+
+        <div class="card-info">
+            <h3>8</h3>
+            <p>Closed Tickets</p>
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <div class="card-icon blue">
+            <i class="fa-solid fa-chart-column"></i>
+        </div>
+
+        <div class="card-info">
+            <h3>24</h3>
+            <p>Total Tickets</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+     RECENT TICKETS
+========================================== -->
+
+<section class="tickets-section">
+
+    <div class="section-header">
+
+        <h2>Recent Tickets</h2>
+
+        <a href="#" class="view-all">View All</a>
+
+    </div>
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Ticket ID</th>
+                    <th>Subject</th>
+                    <th>Category</th>
+                    <th>Priority</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>#1001</td>
+                    <td>Login Issue</td>
+                    <td>Technical</td>
+                    <td><span class="priority high">High</span></td>
+                    <td><span class="status open">Open</span></td>
+                    <td>30 Jul 2026</td>
+
+                    <td>
+                        <button class="view-btn">View</button>
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>#1002</td>
+                    <td>Payment Error</td>
+                    <td>Billing</td>
+                    <td><span class="priority medium">Medium</span></td>
+                    <td><span class="status pending">Pending</span></td>
+                    <td>29 Jul 2026</td>
+
+                    <td>
+                        <button class="view-btn">View</button>
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>#1003</td>
+                    <td>Bug Report</td>
+                    <td>Technical</td>
+                    <td><span class="priority low">Low</span></td>
+                    <td><span class="status closed">Closed</span></td>
+                    <td>28 Jul 2026</td>
+
+                    <td>
+                        <button class="view-btn">View</button>
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+     BOTTOM SECTION
+========================================== -->
+
+<section class="bottom-section">
+
+    <!-- Latest Notifications -->
+
+    <div class="notifications-box">
+
+        <div class="section-header">
+
+            <h2>Latest Notifications</h2>
+
+        </div>
+
+        <div class="notification-item">
+
+            <i class="fa-solid fa-bell"></i>
+
+            <div>
+
+                <h4>Ticket #1001 Updated</h4>
+
+                <p>Your support ticket status has been changed to In Progress.</p>
+
+            </div>
+
+        </div>
+
+        <div class="notification-item">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            <div>
+
+                <h4>Ticket #1003 Closed</h4>
+
+                <p>Your issue has been successfully resolved.</p>
+
+            </div>
+
+        </div>
+
+        <div class="notification-item">
+
+            <i class="fa-solid fa-user"></i>
+
+            <div>
+
+                <h4>Consultant Assigned</h4>
+
+                <p>A consultant has been assigned to Ticket #1002.</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Quick Actions -->
+
+    <div class="quick-actions">
+
+        <div class="section-header">
+
+            <h2>Quick Actions</h2>
+
+        </div>
+
+        <button class="action-btn">
+            <i class="fa-solid fa-plus"></i>
+            Create New Ticket
+        </button>
+
+        <button class="action-btn">
+            <i class="fa-solid fa-ticket"></i>
+            View My Tickets
+        </button>
+
+        <button class="action-btn">
+            <i class="fa-solid fa-user"></i>
+            Update Profile
+        </button>
+
+    </div>
+
+</section>
+
+    </main>
+
+</div>
+
+</body>
+
+</html>

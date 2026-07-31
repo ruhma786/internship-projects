@@ -1,0 +1,594 @@
+/* ==========================================
+   GOOGLE FONT & RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#F5F5F5;
+}
+
+/* ==========================================
+   DASHBOARD LAYOUT
+========================================== */
+
+.dashboard{
+    display:flex;
+    min-height:100vh;
+}
+
+/* ==========================================
+   SIDEBAR
+========================================== */
+
+.sidebar{
+    width:270px;
+    background:linear-gradient(180deg,#C1282A 0%,#850002 100%);
+    color:#fff;
+    padding:30px 20px;
+    position:fixed;
+    left:0;
+    top:0;
+    bottom:0;
+}
+
+/* Logo */
+
+.sidebar-logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:50px;
+}
+
+.sidebar-logo img{
+    width:55px;
+    height:55px;
+    border-radius:10px;
+    object-fit:cover;
+}
+
+.sidebar-logo h2{
+    font-size:22px;
+    font-weight:700;
+}
+
+/* Menu */
+
+.sidebar-menu{
+    list-style:none;
+}
+
+.sidebar-menu li{
+    margin-bottom:12px;
+}
+
+.sidebar-menu li a{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    text-decoration:none;
+    color:#fff;
+    padding:14px 18px;
+    border-radius:12px;
+    transition:.3s;
+}
+
+.sidebar-menu li a:hover{
+    background:rgba(255,255,255,.15);
+}
+
+.sidebar-menu li.active a{
+    background:#fff;
+    color:#C1282A;
+    font-weight:600;
+}
+
+/* ==========================================
+   MAIN CONTENT
+========================================== */
+
+.main-content{
+    margin-left:270px;
+    width:calc(100% - 270px);
+    padding:30px;
+}
+
+/* ==========================================
+   TOPBAR
+========================================== */
+
+.topbar{
+    background:#fff;
+    border-radius:15px;
+    padding:18px 25px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+/* Search */
+
+.search-box{
+    display:flex;
+    align-items:center;
+    background:#F3F3F3;
+    padding:12px 18px;
+    border-radius:30px;
+    width:350px;
+}
+
+.search-box i{
+    color:#777;
+}
+
+.search-box input{
+    border:none;
+    background:none;
+    outline:none;
+    margin-left:12px;
+    width:100%;
+    font-size:15px;
+}
+
+/* Right Side */
+
+.topbar-right{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+/* Bell */
+
+.notification{
+    font-size:22px;
+    color:#444;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.notification:hover{
+    color:#C1282A;
+}
+
+/* Profile */
+
+.profile{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    cursor:pointer;
+}
+
+.profile img{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.profile span{
+    font-weight:600;
+}
+
+/* ==========================================
+   WELCOME SECTION
+========================================== */
+
+.welcome{
+    margin-top:35px;
+}
+
+.welcome h1{
+    font-size:34px;
+    color:#222;
+}
+
+.welcome p{
+    margin-top:8px;
+    color:#666;
+}
+
+/* ==========================================
+   DASHBOARD CARDS
+========================================== */
+
+.dashboard-cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+    margin-top:35px;
+}
+
+.card{
+    background:#FFFFFF;
+    padding:25px;
+    border-radius:18px;
+    display:flex;
+    align-items:center;
+    gap:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card-icon{
+    width:65px;
+    height:65px;
+    border-radius:15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#FFFFFF;
+    font-size:24px;
+}
+
+.red{
+    background:#C1282A;
+}
+
+.orange{
+    background:#F39C12;
+}
+
+.green{
+    background:#27AE60;
+}
+
+.blue{
+    background:#3498DB;
+}
+
+.card-info h3{
+    font-size:30px;
+    color:#222;
+}
+
+.card-info p{
+    color:#666;
+    margin-top:5px;
+}
+
+/* Responsive */
+
+@media(max-width:1100px){
+
+.dashboard-cards{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:600px){
+
+.dashboard-cards{
+    grid-template-columns:1fr;
+}
+
+}
+
+/* ==========================================
+   RECENT TICKETS
+========================================== */
+
+.tickets-section{
+
+    margin-top:40px;
+    background:#FFFFFF;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.section-header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+
+}
+
+.section-header h2{
+
+    font-size:24px;
+    color:#222;
+
+}
+
+.view-all{
+
+    text-decoration:none;
+    color:#C1282A;
+    font-weight:600;
+
+}
+
+.table-container{
+
+    overflow-x:auto;
+
+}
+
+table{
+
+    width:100%;
+    border-collapse:collapse;
+
+}
+
+table th{
+
+    background:#C1282A;
+    color:#FFFFFF;
+    padding:15px;
+    text-align:left;
+
+}
+
+table td{
+
+    padding:15px;
+    border-bottom:1px solid #EEEEEE;
+
+}
+
+table tr:hover{
+
+    background:#F9F9F9;
+
+}
+
+/* Priority */
+
+.priority{
+
+    padding:6px 12px;
+    border-radius:20px;
+    color:#FFFFFF;
+    font-size:13px;
+    font-weight:600;
+
+}
+
+.high{
+
+    background:#E74C3C;
+
+}
+
+.medium{
+
+    background:#F39C12;
+
+}
+
+.low{
+
+    background:#27AE60;
+
+}
+
+/* Status */
+
+.status{
+
+    padding:6px 12px;
+    border-radius:20px;
+    color:#FFFFFF;
+    font-size:13px;
+    font-weight:600;
+
+}
+
+.open{
+
+    background:#3498DB;
+
+}
+
+.pending{
+
+    background:#F39C12;
+
+}
+
+.closed{
+
+    background:#27AE60;
+
+}
+
+/* Button */
+
+.view-btn{
+
+    border:none;
+    background:#C1282A;
+    color:#FFFFFF;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+.view-btn:hover{
+
+    background:#850002;
+
+}
+
+/* ==========================================
+   BOTTOM SECTION
+========================================== */
+
+.bottom-section{
+
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:30px;
+    margin-top:40px;
+
+}
+
+/* Notifications */
+
+.notifications-box{
+
+    background:#FFFFFF;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.notification-item{
+
+    display:flex;
+    align-items:flex-start;
+    gap:18px;
+    padding:18px 0;
+    border-bottom:1px solid #EEEEEE;
+
+}
+
+.notification-item:last-child{
+
+    border-bottom:none;
+
+}
+
+.notification-item i{
+
+    width:50px;
+    height:50px;
+    background:#C1282A;
+    color:#FFFFFF;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:18px;
+
+}
+
+.notification-item h4{
+
+    margin-bottom:6px;
+    color:#222;
+
+}
+
+.notification-item p{
+
+    color:#666;
+    font-size:14px;
+
+}
+
+/* Quick Actions */
+
+.quick-actions{
+
+    background:#FFFFFF;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.action-btn{
+
+    width:100%;
+    border:none;
+    padding:15px;
+    margin-top:18px;
+    border-radius:12px;
+    background:linear-gradient(180deg,#C1282A 0%,#850002 100%);
+    color:#FFFFFF;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+.action-btn i{
+
+    margin-right:10px;
+
+}
+
+.action-btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* Responsive */
+
+@media(max-width:992px){
+
+.bottom-section{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:992px){
+
+.sidebar{
+    width:220px;
+}
+
+.main-content{
+    margin-left:220px;
+    width:calc(100% - 220px);
+}
+
+.search-box{
+    width:250px;
+}
+
+}
+
+@media(max-width:768px){
+
+.sidebar{
+    display:none;
+}
+
+.main-content{
+    margin-left:0;
+    width:100%;
+}
+
+.topbar{
+    flex-direction:column;
+    gap:20px;
+}
+
+.search-box{
+    width:100%;
+}
+
+}
