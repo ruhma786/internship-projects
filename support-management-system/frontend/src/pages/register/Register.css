@@ -1,0 +1,350 @@
+/* ==========================================
+   REGISTER PAGE
+========================================== */
+
+.register-page{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#F5F5F5;
+    padding:50px;
+}
+
+/* ==========================================
+   REGISTER WRAPPER
+========================================== */
+
+.register-wrapper{
+    width:1200px;
+    max-width:100%;
+    background:#FFFFFF;
+    display:flex;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+/* ==========================================
+   LEFT PANEL
+========================================== */
+
+.register-left{
+    flex:1;
+    background:linear-gradient(180deg,#C1282A 0%,#850002 100%);
+    color:#FFFFFF;
+    padding:60px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    border-radius:8px;
+}
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.register-left .navbar-logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:50px;
+}
+
+.register-left .navbar-logo img{
+    width:55px;
+    height:55px;
+    object-fit:cover;
+    border-radius:50%;
+}
+
+.register-left .navbar-logo h2{
+    color:#FFFFFF;
+    font-size:22px;
+    font-weight:700;
+    margin:0;
+}
+
+/* ==========================================
+   HEADING
+========================================== */
+
+.register-left h1{
+    font-size:55px;
+    color:#FFFFFF;
+    margin-bottom:20px;
+}
+
+.register-left p{
+    font-size:16px;
+    color:#FFFFFF;
+    line-height:30px;
+    margin-bottom:35px;
+}
+
+/* ==========================================
+   FEATURES
+========================================== */
+
+.features{
+    margin-top:40px;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+
+    /* IMPORTANT */
+    background:transparent;
+    padding:0;
+}
+
+.feature{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    /* IMPORTANT */
+    background:transparent;
+    border:none;
+    box-shadow:none;
+}
+
+.feature svg{
+    color:#fff;
+    font-size:18px;
+}
+
+.feature span{
+    color:#fff;
+    font-size:18px;
+}
+
+/* ==========================================
+   ILLUSTRATION
+========================================== */
+
+.register-image{
+    margin-top:20px;
+    text-align:center;
+}
+
+.register-image img{
+    width:100%;
+    max-width:400px;
+}
+
+/* ==========================================
+   RIGHT PANEL
+========================================== */
+
+.register-right{
+    flex:1;
+    background:#FFFFFF;
+    padding:60px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.register-form{
+    width:100%;
+    max-width:430px;
+}
+
+.register-form h2{
+    font-size:34px;
+    color:#1A1A1A;
+    margin-bottom:10px;
+}
+
+.register-form p{
+    color:#666666;
+    margin-bottom:30px;
+    line-height:26px;
+}
+
+/* ==========================================
+   INPUT GROUP
+========================================== */
+
+.input-group{
+    margin-bottom:22px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:500;
+    color:#333333;
+}
+
+.input-group input{
+    width:100%;
+    padding:14px 18px;
+    border:1px solid #DDDDDD;
+    border-radius:10px;
+    outline:none;
+    font-size:15px;
+    transition:.3s;
+    box-sizing:border-box;
+}
+
+.input-group input:focus{
+    border-color:#C1282A;
+    box-shadow:0 0 8px rgba(193,40,42,.20);
+}
+
+/* ==========================================
+   PASSWORD BOX
+========================================== */
+
+.password-box{
+    position:relative;
+}
+
+.password-box input{
+    width:100%;
+    padding-right:50px;
+}
+
+.password-box svg{
+    position:absolute;
+    top:50%;
+    right:18px;
+    transform:translateY(-50%);
+    color:#777777;
+    cursor:pointer;
+}
+
+/* ==========================================
+   TERMS
+========================================== */
+
+.terms{
+    margin-bottom:25px;
+}
+
+.terms label{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:#555555;
+    font-size:14px;
+    cursor:pointer;
+}
+
+.terms input{
+    width:18px;
+    height:18px;
+}
+
+/* ==========================================
+   REGISTER BUTTON
+========================================== */
+
+.register-btn{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(180deg,#C1282A 0%,#850002 100%);
+    color:#FFFFFF;
+    font-size:17px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.register-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(193,40,42,.30);
+}
+
+/* ==========================================
+   LOGIN LINK
+========================================== */
+
+.login-link{
+    margin-top:25px;
+    text-align:center;
+}
+
+.login-link a{
+    color:#C1282A;
+    font-weight:600;
+    text-decoration:none;
+}
+
+.login-link a:hover{
+    text-decoration:underline;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width:992px){
+
+    .register-wrapper{
+        flex-direction:column;
+    }
+
+    .register-left,
+    .register-right{
+        padding:40px;
+    }
+
+    .register-left{
+        text-align:center;
+    }
+
+    .register-left .navbar-logo{
+        justify-content:center;
+    }
+
+    .feature{
+        justify-content:center;
+    }
+
+}
+
+@media (max-width:576px){
+
+    .register-page{
+        padding:20px;
+    }
+
+    .register-left{
+        padding:30px;
+    }
+
+    .register-right{
+        padding:30px;
+    }
+
+    .register-left .navbar-logo{
+        margin-bottom:30px;
+    }
+
+    .register-left .navbar-logo img{
+        width:45px;
+        height:45px;
+    }
+
+    .register-left .navbar-logo h2{
+        font-size:20px;
+    }
+
+    .register-left h1{
+        font-size:32px;
+    }
+
+    .register-left p{
+        font-size:15px;
+        line-height:26px;
+    }
+
+    .register-form h2{
+        font-size:28px;
+    }
+
+}

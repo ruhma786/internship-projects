@@ -1,0 +1,84 @@
+/* ==========================
+   STATISTICS SECTION
+========================== */
+
+.statistics{
+    padding:90px 0;
+    background:#f5f7fb;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+    font-size:42px;
+    color:#222;
+    margin-bottom:15px;
+}
+
+.section-title p{
+    color:#666;
+    font-size:18px;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+.stat-card{
+    background:#fff;
+    border-radius:15px;
+    padding:40px 20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.stat-card:hover{
+    transform:translateY(-10px);
+}
+
+.stat-icon{
+    font-size:50px;
+    color:#C1282A;
+    margin-bottom:20px;
+}
+
+.stat-card h3{
+    font-size:38px;
+    color:#111;
+    margin-bottom:10px;
+}
+
+.stat-card p{
+    color:#666;
+    font-size:17px;
+}
+
+/* Responsive */
+
+@media(max-width:992px){
+
+.stats-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:576px){
+
+.stats-grid{
+    grid-template-columns:1fr;
+}
+
+}
