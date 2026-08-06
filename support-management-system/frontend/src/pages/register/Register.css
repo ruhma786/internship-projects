@@ -29,14 +29,19 @@
    LEFT PANEL
 ========================================== */
 
+
 .register-left{
     flex:1;
     background:linear-gradient(180deg,#C1282A 0%,#850002 100%);
-    color:#FFFFFF;
-    padding:60px;
+    color:#fff;
+
+    padding:40px 60px;
+
     display:flex;
     flex-direction:column;
-    justify-content:center;
+
+    justify-content:flex-start;
+
     border-radius:8px;
 }
 
@@ -346,5 +351,19 @@
     .register-form h2{
         font-size:28px;
     }
+
+}
+
+.navbar-logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-top:20px;
+
+    margin-bottom:50px;
 
 }

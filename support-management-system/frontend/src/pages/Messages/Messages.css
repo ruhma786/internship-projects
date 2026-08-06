@@ -1,0 +1,63 @@
+.messages-page{
+
+    min-height:100vh;
+    background:#f5f5f5;
+    padding:40px;
+
+}
+
+.page-header{
+
+    margin-bottom:25px;
+
+}
+
+.back-btn{
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    border:none;
+    background:none;
+
+    color:#C1282A;
+
+    font-size:16px;
+    font-weight:600;
+
+    cursor:pointer;
+
+}
+
+.back-btn:hover{
+
+    color:#850002;
+
+}
+
+.messages-container{
+
+    background:#fff;
+
+    padding:35px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+.messages-container h1{
+
+    color:#222;
+    margin-bottom:10px;
+
+}
+
+.messages-container p{
+
+    color:#666;
+    line-height:28px;
+
+}

@@ -1,0 +1,289 @@
+/* ==========================================
+TICKET DETAILS PAGE
+========================================== */
+
+.ticket-details-page{
+    min-height:100vh;
+    background:#f5f5f5;
+    padding:40px;
+}
+
+/* ==========================================
+PAGE HEADER
+========================================== */
+
+.page-header{
+    margin-bottom:25px;
+}
+
+.back-btn{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    border:none;
+    background:none;
+    color:#C1282A;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.back-btn:hover{
+    color:#850002;
+}
+
+/* ==========================================
+MAIN CONTAINER
+========================================== */
+
+.ticket-details-container{
+    background:#fff;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.ticket-details-container h1{
+    color:#222;
+    margin-bottom:10px;
+}
+
+.ticket-details-container>p{
+    color:#666;
+    margin-bottom:30px;
+}
+
+/* ==========================================
+DETAILS CARD
+========================================== */
+
+.details-card{
+    background:#fff;
+    border:1px solid #eee;
+    border-radius:12px;
+    padding:25px;
+    margin-bottom:25px;
+}
+
+.details-card h2{
+    color:#C1282A;
+    margin-bottom:20px;
+    font-size:22px;
+}
+
+/* ==========================================
+INFO GRID
+========================================== */
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.info-item{
+    background:#fafafa;
+    padding:15px;
+    border-radius:10px;
+}
+
+.info-item strong{
+    display:block;
+    margin-bottom:8px;
+    color:#333;
+}
+
+.info-item p{
+    margin:0;
+    color:#555;
+}
+
+/* ==========================================
+STATUS & PRIORITY
+========================================== */
+
+.priority-high{
+    color:#dc3545;
+    font-weight:bold;
+}
+
+.status-open{
+    color:#28a745;
+    font-weight:bold;
+}
+
+/* ==========================================
+ATTACHMENT
+========================================== */
+
+.attachment-box{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:#f9f9f9;
+    padding:15px;
+    border-radius:10px;
+    color:#444;
+}
+
+/* ==========================================
+CHAT BOX
+========================================== */
+
+.chat-box{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.message{
+    max-width:75%;
+    padding:15px;
+    border-radius:12px;
+    position:relative;
+}
+
+.message strong{
+    display:block;
+    margin-bottom:8px;
+    font-size:15px;
+}
+
+.message p{
+    margin-bottom:8px;
+    line-height:24px;
+}
+
+.message span{
+    font-size:12px;
+    color:#777;
+}
+
+/* Client Message */
+
+.client{
+    align-self:flex-end;
+    background:#C1282A;
+    color:#fff;
+}
+
+.client span{
+    color:#f5f5f5;
+}
+
+/* Consultant Message */
+
+.consultant{
+    align-self:flex-start;
+    background:#f2f2f2;
+    color:#333;
+}
+
+/* ==========================================
+TIMELINE
+========================================== */
+
+.timeline{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.timeline li{
+    padding:15px 20px;
+    margin-bottom:15px;
+    border-left:4px solid #C1282A;
+    background:#fafafa;
+    border-radius:8px;
+}
+
+.timeline li span{
+    display:block;
+    margin-top:6px;
+    color:#777;
+    font-size:13px;
+}
+
+/* ==========================================
+CURRENT STATUS
+========================================== */
+
+.status-box{
+    background:#e8f5e9;
+    border-left:5px solid #28a745;
+    padding:18px;
+    border-radius:10px;
+    color:#2e7d32;
+    font-weight:500;
+    line-height:24px;
+}
+
+/* ==========================================
+REPLY BOX
+========================================== */
+
+.reply-box{
+    width:100%;
+    padding:15px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    outline:none;
+    resize:none;
+    font-size:15px;
+    margin-bottom:20px;
+    transition:.3s;
+}
+
+.reply-box:focus{
+    border-color:#C1282A;
+}
+
+/* ==========================================
+SEND BUTTON
+========================================== */
+
+.reply-btn{
+    border:none;
+    background:linear-gradient(180deg,#C1282A 0%,#850002 100%);
+    color:#fff;
+    padding:14px 30px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.reply-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 20px rgba(193,40,42,.30);
+}
+
+/* ==========================================
+RESPONSIVE
+========================================== */
+
+@media(max-width:768px){
+
+.info-grid{
+    grid-template-columns:1fr;
+}
+
+.message{
+    max-width:100%;
+}
+
+.ticket-details-page{
+    padding:20px;
+}
+
+.ticket-details-container{
+    padding:20px;
+}
+
+.reply-btn{
+    width:100%;
+}
+
+}

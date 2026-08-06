@@ -1,0 +1,111 @@
+.dashboard-cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+    margin-top:30px;
+}
+
+.dashboard-card{
+
+    background:#fff;
+
+    border-radius:15px;
+
+    padding:25px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.dashboard-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 12px 25px rgba(0,0,0,.12);
+}
+
+.card-icon{
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    font-size:28px;
+}
+
+.total{
+
+    background:#0d6efd;
+}
+
+.open{
+
+    background:#ffc107;
+}
+
+.progress{
+
+    background:#fd7e14;
+}
+
+.closed{
+
+    background:#198754;
+}
+
+.card-info h2{
+
+    font-size:32px;
+
+    margin-bottom:5px;
+
+    color:#222;
+}
+
+.card-info p{
+
+    color:#777;
+
+    font-size:15px;
+}
+
+@media(max-width:992px){
+
+.dashboard-cards{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:576px){
+
+.dashboard-cards{
+
+grid-template-columns:1fr;
+
+}
+
+}
