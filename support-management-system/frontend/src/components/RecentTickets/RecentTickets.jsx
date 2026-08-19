@@ -1,14 +1,19 @@
 import "./RecentTickets.css";
+import { useNavigate } from "react-router-dom";
 
 function RecentTickets() {
+  const navigate = useNavigate();
   return (
     <div className="recent-tickets">
 
       <div className="table-header">
         <h2>Recent Tickets</h2>
 
-        <button className="view-all-btn">
-          View All
+        <button
+           className="view-all-btn"
+           onClick={() => navigate("/my-tickets")}
+          >
+            View All
         </button>
       </div>
 

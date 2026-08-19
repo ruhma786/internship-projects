@@ -1,18 +1,26 @@
 import "./DashboardCards.css";
+import { useNavigate } from "react-router-dom";
 import {
   FaTicketAlt,
   FaClock,
   FaSpinner,
-  FaCheckCircle
+  FaCheckCircle,
 } from "react-icons/fa";
 
 function DashboardCards() {
+
+  const navigate = useNavigate();
 
   return (
 
     <div className="dashboard-cards">
 
-      <div className="dashboard-card">
+      {/* Total Tickets */}
+
+      <div
+        className="dashboard-card"
+        onClick={() => navigate("/my-tickets")}
+      >
 
         <div className="card-icon total">
           <FaTicketAlt />
@@ -25,7 +33,12 @@ function DashboardCards() {
 
       </div>
 
-      <div className="dashboard-card">
+      {/* Open Tickets */}
+
+      <div
+        className="dashboard-card"
+        onClick={() => navigate("/my-tickets")}
+      >
 
         <div className="card-icon open">
           <FaClock />
@@ -38,7 +51,12 @@ function DashboardCards() {
 
       </div>
 
-      <div className="dashboard-card">
+      {/* In Progress */}
+
+      <div
+        className="dashboard-card"
+        onClick={() => navigate("/my-tickets")}
+      >
 
         <div className="card-icon progress">
           <FaSpinner />
@@ -51,7 +69,12 @@ function DashboardCards() {
 
       </div>
 
-      <div className="dashboard-card">
+      {/* Closed Tickets */}
+
+      <div
+        className="dashboard-card"
+        onClick={() => navigate("/my-tickets")}
+      >
 
         <div className="card-icon closed">
           <FaCheckCircle />
@@ -67,7 +90,6 @@ function DashboardCards() {
     </div>
 
   );
-
 }
 
 export default DashboardCards;

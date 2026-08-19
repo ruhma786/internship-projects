@@ -1,72 +1,107 @@
 import { Routes, Route } from "react-router-dom";
+
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
-import ClientDashboard from "../pages/ClientDashboard/ClientDashboard";
-import CreateTicket from "../pages/CreateTicket/CreateTicket";
-import MyTickets from "../pages/MyTickets/MyTickets";
-import Messages from "../pages/Messages/Messages";
-import Profile from "../pages/Profile/Profile";
-import Notifications from "../pages/Notifications/Notifications";
-import Settings from "../pages/Settings/Settings";
-import TicketDetails from "../pages/TicketDetails/TicketDetails";
+
+
+// ================= CLIENT =================
+import ClientDashboard from "../pages/client/ClientDashboard";
+
+import ProjectManagerDashboard from "../pages/ProjectManager/ProjectManagerDashboard";
+// ================= ADMIN =================
+import AdminDashboard from "../pages/admin/AdminDashboard";
+import TicketManagement from "../pages/admin/TicketManagement";
+import TicketDetails from "../pages/admin/TicketDetails";
+import ProjectManagerAssignment from "../pages/admin/ProjectManagerAssignment";
+
 
 function AppRoutes() {
 
-  return (
+    return (
 
-    <Routes>
+        <Routes>
 
-      <Route path="/" element={<Home />} />
+            {/* =================================================
+                GENERAL ROUTES
+            ================================================= */}
 
-      <Route path="/login" element={<Login />} />
+            <Route
+                path="/"
+                element={<Home />}
+            />
 
-      <Route path="/register" element={<Register />} />
+            <Route
+                path="/login"
+                element={<Login />}
+            />
 
-      <Route
-        path="/client-dashboard"
-        element={<ClientDashboard />}
-      />
+            <Route
+                path="/register"
+                element={<Register />}
+            />
 
-      <Route
-        path="/create-ticket"
-        element={<CreateTicket />}
-      />
 
-      <Route
-        path="/my-tickets"
-        element={<MyTickets />}
-      />
+            {/* =================================================
+                ADMIN DASHBOARD
+            ================================================= */}
 
-      <Route
-        path="/ticket-details/:ticketId"
-        element={<TicketDetails />}
-      />
+            <Route
+                path="/admin-dashboard"
+                element={<AdminDashboard />}
+            />
 
-      <Route
-        path="/messages"
-        element={<Messages />}
-      />
 
-      <Route
-        path="/notifications"
-        element={<Notifications />}
-      />
+            {/* =================================================
+                ADMIN TICKET MANAGEMENT
+            ================================================= */}
 
-      <Route
-        path="/profile"
-        element={<Profile />}
-      />
+            <Route
+                path="/tickets"
+                element={<TicketManagement />}
+            />
 
-      <Route
-        path="/settings"
-        element={<Settings />}
-      />
 
-    </Routes>
+            {/* =================================================
+                TICKET DETAILS
+            ================================================= */}
 
-  );
+            <Route
+                path="/tickets/:ticketId"
+                element={<TicketDetails />}
+            />
+
+
+            {/* =================================================
+                PROJECT MANAGER ASSIGNMENT
+            ================================================= */}
+
+            <Route
+                path="/assign-project-manager/:ticketId"
+                element={<ProjectManagerAssignment />}
+            />
+
+
+            {/* =================================================
+                CLIENT DASHBOARD
+            ================================================= */}
+
+            <Route
+                path="/client-dashboard"
+                element={<ClientDashboard />}
+            />
+
+        
+
+         {/* Project Manager */}
+        <Route
+          path="/project-manager-dashboard"
+          element={<ProjectManagerDashboard />}
+        />
+        </Routes>
+    );
 
 }
+
 
 export default AppRoutes;

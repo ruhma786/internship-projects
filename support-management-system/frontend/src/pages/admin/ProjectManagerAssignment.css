@@ -1,0 +1,737 @@
+/* =========================================================
+   PROJECT MANAGER ASSIGNMENT PAGE
+   ========================================================= */
+
+.pm-assignment-page {
+    min-height: 100vh;
+    padding: 35px 45px 50px;
+    background: #f5f7fb;
+    font-family: "Poppins", sans-serif;
+    color: #1f2937;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+   ========================================================= */
+
+.pm-page-header {
+    margin-bottom: 30px;
+}
+
+.pm-back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    border: none;
+    background: transparent;
+    color: #2563eb;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 22px;
+    transition: 0.2s ease;
+}
+
+.pm-back-btn:hover {
+    color: #1d4ed8;
+    transform: translateX(-3px);
+}
+
+.pm-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.pm-label {
+    display: inline-block;
+    margin-bottom: 7px;
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+}
+
+.pm-heading h1 {
+    margin: 0;
+    font-size: 31px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.pm-heading p {
+    margin: 8px 0 0;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.pm-ticket-badge {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 11px 17px;
+    background: #eff6ff;
+    color: #2563eb;
+    border: 1px solid #dbeafe;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   MAIN GRID
+   ========================================================= */
+
+.pm-assignment-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(360px, 0.8fr);
+    gap: 25px;
+    align-items: start;
+}
+
+
+/* =========================================================
+   COMMON CARD
+   ========================================================= */
+
+.pm-ticket-card,
+.pm-assignment-card,
+.pm-workflow-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(15, 23, 42, 0.06);
+}
+
+
+/* =========================================================
+   CARD HEADER
+   ========================================================= */
+
+.pm-card-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 23px 25px;
+    border-bottom: 1px solid #eef0f4;
+}
+
+.pm-card-icon {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.ticket-icon {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.manager-icon {
+    background: #f3e8ff;
+    color: #9333ea;
+}
+
+.pm-card-header h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.pm-card-header p {
+    margin: 4px 0 0;
+    color: #6b7280;
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   TICKET SUMMARY
+   ========================================================= */
+
+.pm-ticket-content {
+    padding: 25px;
+}
+
+.pm-subject {
+    margin-bottom: 25px;
+}
+
+.pm-subject span {
+    display: block;
+    margin-bottom: 7px;
+    color: #6b7280;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.pm-subject h2 {
+    margin: 0;
+    color: #111827;
+    font-size: 22px;
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   TICKET INFORMATION
+   ========================================================= */
+
+.pm-ticket-info {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.pm-info-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px;
+    background: #f8fafc;
+    border: 1px solid #edf0f4;
+    border-radius: 11px;
+}
+
+.pm-info-item > svg {
+    color: #2563eb;
+    font-size: 15px;
+    flex-shrink: 0;
+}
+
+.pm-info-item div {
+    min-width: 0;
+}
+
+.pm-info-item small {
+    display: block;
+    margin-bottom: 3px;
+    color: #9ca3af;
+    font-size: 11px;
+}
+
+.pm-info-item strong {
+    display: block;
+    color: #374151;
+    font-size: 13px;
+    word-break: break-word;
+}
+
+.pm-info-item strong.high {
+    color: #dc2626;
+}
+
+.pm-info-item strong.medium {
+    color: #d97706;
+}
+
+.pm-info-item strong.low {
+    color: #16a34a;
+}
+
+
+/* =========================================================
+   PROBLEM DESCRIPTION
+   ========================================================= */
+
+.pm-problem-box {
+    padding: 18px 20px;
+    background: #f8fafc;
+    border-left: 4px solid #2563eb;
+    border-radius: 10px;
+}
+
+.pm-problem-box h3 {
+    margin: 0 0 8px;
+    color: #111827;
+    font-size: 14px;
+}
+
+.pm-problem-box p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   ASSIGNMENT FORM
+   ========================================================= */
+
+.pm-form {
+    padding: 25px;
+}
+
+.pm-form-group {
+    margin-bottom: 22px;
+}
+
+.pm-form-group label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    color: #374151;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.pm-form-group label span {
+    color: #9ca3af;
+    font-size: 11px;
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   SELECT
+   ========================================================= */
+
+.pm-select-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.pm-select-wrapper > svg:first-child {
+    position: absolute;
+    left: 14px;
+    color: #6b7280;
+    pointer-events: none;
+    font-size: 14px;
+}
+
+.pm-select-wrapper > svg:last-child {
+    position: absolute;
+    right: 14px;
+    color: #6b7280;
+    pointer-events: none;
+    font-size: 12px;
+}
+
+.pm-select-wrapper select {
+    width: 100%;
+    height: 48px;
+    padding: 0 42px 0 42px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    outline: none;
+    background: #ffffff;
+    color: #374151;
+    font-family: inherit;
+    font-size: 13px;
+    cursor: pointer;
+    appearance: none;
+    transition: 0.2s ease;
+}
+
+.pm-select-wrapper select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* =========================================================
+   SELECTED MANAGER
+   ========================================================= */
+
+.selected-manager {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: -5px;
+    margin-bottom: 22px;
+    padding: 14px;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 11px;
+}
+
+.manager-avatar {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.selected-manager > div:nth-child(2) {
+    min-width: 0;
+    flex: 1;
+}
+
+.selected-manager strong {
+    display: block;
+    color: #111827;
+    font-size: 13px;
+}
+
+.selected-manager span {
+    display: block;
+    color: #6b7280;
+    font-size: 11px;
+    margin-top: 2px;
+    word-break: break-word;
+}
+
+.selected-manager small {
+    display: block;
+    margin-top: 3px;
+    color: #16a34a;
+    font-size: 10px;
+}
+
+.available-badge {
+    padding: 5px 9px;
+    border-radius: 20px;
+    background: #dcfce7;
+    color: #15803d !important;
+    font-size: 10px !important;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   TEXTAREA
+   ========================================================= */
+
+.pm-form-group textarea {
+    width: 100%;
+    min-height: 125px;
+    resize: vertical;
+    padding: 13px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    outline: none;
+    background: #ffffff;
+    color: #374151;
+    font-family: inherit;
+    font-size: 13px;
+    line-height: 1.6;
+    box-sizing: border-box;
+    transition: 0.2s ease;
+}
+
+.pm-form-group textarea::placeholder {
+    color: #9ca3af;
+}
+
+.pm-form-group textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* =========================================================
+   WORKFLOW INFORMATION
+   ========================================================= */
+
+.pm-workflow-info {
+    display: flex;
+    gap: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background: #eff6ff;
+    border: 1px solid #dbeafe;
+    border-radius: 10px;
+}
+
+.pm-workflow-info > svg {
+    margin-top: 2px;
+    color: #2563eb;
+    flex-shrink: 0;
+}
+
+.pm-workflow-info strong {
+    display: block;
+    margin-bottom: 4px;
+    color: #1e3a8a;
+    font-size: 12px;
+}
+
+.pm-workflow-info p {
+    margin: 0;
+    color: #64748b;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   ASSIGN BUTTON
+   ========================================================= */
+
+.assign-manager-btn {
+    width: 100%;
+    height: 49px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.assign-manager-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(37, 99, 235, 0.2);
+}
+
+
+/* =========================================================
+   SUCCESS STATE
+   ========================================================= */
+
+.assignment-success {
+    padding: 35px 25px;
+    text-align: center;
+}
+
+.success-icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: #dcfce7;
+    color: #16a34a;
+    font-size: 32px;
+}
+
+.assignment-success h2 {
+    margin: 0 0 8px;
+    color: #111827;
+    font-size: 21px;
+}
+
+.assignment-success > p {
+    margin: 0 auto 22px;
+    max-width: 400px;
+    color: #6b7280;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.success-manager {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: 330px;
+    margin: 0 auto 25px;
+    padding: 14px;
+    text-align: left;
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 11px;
+}
+
+.success-manager div:last-child {
+    display: flex;
+    flex-direction: column;
+}
+
+.success-manager strong {
+    color: #111827;
+    font-size: 13px;
+}
+
+.success-manager span {
+    margin-top: 3px;
+    color: #6b7280;
+    font-size: 11px;
+}
+
+.continue-workflow-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 46px;
+    padding: 0 18px;
+    border: none;
+    border-radius: 9px;
+    background: #111827;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.continue-workflow-btn:hover {
+    background: #1f2937;
+}
+
+.rotate-arrow {
+    transform: rotate(180deg);
+}
+
+
+/* =========================================================
+   WORKFLOW CARD
+   ========================================================= */
+
+.pm-workflow-card {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin-top: 25px;
+    padding: 20px 25px;
+}
+
+.workflow-step {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    flex: 1;
+    min-width: 0;
+}
+
+.workflow-number {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #f1f5f9;
+    color: #94a3b8;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.workflow-step.completed .workflow-number {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.workflow-step.active .workflow-number {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+.workflow-step strong {
+    display: block;
+    color: #374151;
+    font-size: 12px;
+}
+
+.workflow-step span {
+    display: block;
+    margin-top: 3px;
+    color: #9ca3af;
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+.workflow-line {
+    width: 35px;
+    height: 1px;
+    margin: 0 12px;
+    background: #dbe1e8;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+    .pm-assignment-page {
+        padding: 30px;
+    }
+
+    .pm-assignment-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pm-workflow-card {
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .workflow-step {
+        flex: 1 1 45%;
+    }
+
+    .workflow-line {
+        display: none;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .pm-assignment-page {
+        padding: 20px 15px 35px;
+    }
+
+    .pm-heading {
+        flex-direction: column;
+    }
+
+    .pm-heading h1 {
+        font-size: 25px;
+    }
+
+    .pm-ticket-badge {
+        align-self: flex-start;
+    }
+
+    .pm-ticket-info {
+        grid-template-columns: 1fr;
+    }
+
+    .pm-card-header,
+    .pm-ticket-content,
+    .pm-form {
+        padding: 18px;
+    }
+
+    .selected-manager {
+        align-items: flex-start;
+    }
+
+    .available-badge {
+        display: none !important;
+    }
+
+    .workflow-step {
+        flex: 1 1 100%;
+    }
+}

@@ -1,11 +1,14 @@
 import "./TopNavbar.css";
+import { useNavigate } from "react-router-dom";
 import {
   FaBell,
   FaSearch,
-  FaUserCircle
+  FaUserCircle,
 } from "react-icons/fa";
 
 function TopNavbar() {
+
+  const navigate = useNavigate();
 
   return (
 
@@ -36,15 +39,27 @@ function TopNavbar() {
 
       <div className="top-right">
 
-        <div className="notification">
+        {/* Notification */}
+
+        <div
+          className="notification"
+          onClick={() => navigate("/notifications")}
+        >
 
           <FaBell />
 
-          <span className="badge">3</span>
+          <span className="badge">
+            3
+          </span>
 
         </div>
 
-        <div className="profile">
+        {/* Profile */}
+
+        <div
+          className="profile"
+          onClick={() => navigate("/profile")}
+        >
 
           <FaUserCircle />
 

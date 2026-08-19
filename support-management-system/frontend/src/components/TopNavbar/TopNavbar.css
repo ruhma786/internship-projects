@@ -167,3 +167,25 @@ width:100%;
 }
 
 }
+
+.notification,
+.profile{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.notification:hover,
+.profile:hover{
+
+    color:#C1282A;
+
+    transform:scale(1.08);
+}

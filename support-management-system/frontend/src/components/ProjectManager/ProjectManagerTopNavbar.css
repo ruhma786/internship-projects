@@ -1,0 +1,133 @@
+/* ================================
+   PROJECT MANAGER TOP NAVBAR
+================================ */
+
+.project-manager-top-navbar {
+  height: 90px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 35px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+
+/* ================================
+   DASHBOARD TITLE
+================================ */
+
+.project-manager-top-navbar strong {
+  color: #26364d;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+
+/* ================================
+   SEARCH
+================================ */
+
+.project-manager-search {
+  width: 300px;
+  height: 45px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0 15px;
+  outline: none;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+
+.project-manager-search::placeholder {
+  color: #9aa2b1;
+}
+
+
+.project-manager-search:focus {
+  border-color: #c9141b;
+}
+
+
+/* ================================
+   RIGHT SIDE
+================================ */
+
+.project-manager-navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+
+/* ================================
+   ICONS
+================================ */
+
+.project-manager-navbar-icon {
+  font-size: 19px;
+  color: #68728a;
+  cursor: pointer;
+}
+
+
+/* ================================
+   PROFILE
+================================ */
+
+.project-manager-navbar-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #344767;
+  font-weight: 500;
+}
+
+
+.project-manager-navbar-profile span {
+  font-size: 14px;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+
+  .project-manager-top-navbar {
+    padding: 0 20px;
+  }
+
+  .project-manager-search {
+    width: 220px;
+  }
+
+  .project-manager-navbar-right {
+    gap: 15px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .project-manager-top-navbar {
+    height: auto;
+    min-height: 90px;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 15px 20px;
+  }
+
+  .project-manager-search {
+    order: 3;
+    width: 100%;
+  }
+
+  .project-manager-navbar-right {
+    margin-left: auto;
+  }
+
+}

@@ -109,3 +109,12 @@ grid-template-columns:1fr;
 }
 
 }
+.dashboard-card{
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.dashboard-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 12px 25px rgba(0,0,0,.15);
+}

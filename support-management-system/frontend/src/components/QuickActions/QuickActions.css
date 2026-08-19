@@ -87,3 +87,18 @@ grid-template-columns:1fr;
 }
 
 }
+.action-card{
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.action-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+}
+
+.action-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+    gap:20px;
+}

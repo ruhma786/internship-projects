@@ -1,0 +1,214 @@
+/* ==========================================
+   ADMIN STATS
+========================================== */
+
+.admin-stats {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    padding: 20px 30px;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   STAT CARD
+========================================== */
+
+.admin-stat-card {
+    width: 100%;
+    min-width: 0;
+    min-height: 150px;
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 28px 30px;
+
+    box-sizing: border-box;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s ease;
+}
+
+.admin-stat-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ==========================================
+   ICON
+========================================== */
+
+.stat-icon {
+    width: 62px;
+    height: 62px;
+
+    min-width: 62px;
+
+    border-radius: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+
+    margin-right: 22px;
+
+    background: #f1f5ff;
+    color: #2878ff;
+}
+
+
+/* ==========================================
+   CONTENT
+========================================== */
+
+.stat-content {
+    min-width: 0;
+}
+
+.stat-content p {
+    margin: 0 0 8px;
+
+    color: #777777;
+
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.stat-content h2 {
+    margin: 0 0 5px;
+
+    color: #1f3b5b;
+
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.stat-content span {
+    display: block;
+
+    color: #999999;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* ==========================================
+   CARD COLORS
+========================================== */
+
+.admin-stat-card:nth-child(1) {
+    border-left: 4px solid #d71920;
+}
+
+.admin-stat-card:nth-child(1) .stat-icon {
+    background: #fde8e9;
+    color: #d71920;
+}
+
+
+.admin-stat-card:nth-child(2) {
+    border-left: 4px solid #f59e0b;
+}
+
+.admin-stat-card:nth-child(2) .stat-icon {
+    background: #fff3d6;
+    color: #f59e0b;
+}
+
+
+.admin-stat-card:nth-child(3) {
+    border-left: 4px solid #2878ff;
+}
+
+.admin-stat-card:nth-child(3) .stat-icon {
+    background: #e7f0ff;
+    color: #2878ff;
+}
+
+
+.admin-stat-card:nth-child(4) {
+    border-left: 4px solid #16a34a;
+}
+
+.admin-stat-card:nth-child(4) .stat-icon {
+    background: #e5f7ec;
+    color: #16a34a;
+}
+
+
+/* ==========================================
+   LARGE SCREEN
+========================================== */
+
+@media (min-width: 1200px) {
+
+    .admin-stats {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        padding: 20px 30px;
+    }
+
+    .admin-stat-card {
+        min-height: 155px;
+        padding: 28px 30px;
+    }
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1000px) {
+
+    .admin-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .admin-stats {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 15px;
+    }
+
+    .admin-stat-card {
+        min-height: 130px;
+        padding: 22px;
+    }
+
+    .stat-icon {
+        width: 55px;
+        height: 55px;
+        min-width: 55px;
+        margin-right: 18px;
+    }
+
+    .stat-content h2 {
+        font-size: 28px;
+    }
+}

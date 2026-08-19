@@ -1,0 +1,90 @@
+/* ================================
+   CLIENT TOP NAVBAR
+================================ */
+
+.client-top-navbar {
+  height: 90px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 35px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+
+/* ================================
+   DASHBOARD TITLE
+================================ */
+
+.client-top-navbar strong {
+  color: #26364d;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+
+/* ================================
+   SEARCH
+================================ */
+
+.client-search {
+  width: 300px;
+  height: 45px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0 15px;
+  outline: none;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+
+.client-search::placeholder {
+  color: #9aa2b1;
+}
+
+
+.client-search:focus {
+  border-color: #c9141b;
+}
+
+
+/* ================================
+   RIGHT SIDE
+================================ */
+
+.client-navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+
+/* ================================
+   ICONS
+================================ */
+
+.client-navbar-icon {
+  font-size: 19px;
+  color: #68728a;
+  cursor: pointer;
+}
+
+
+/* ================================
+   PROFILE
+================================ */
+
+.client-navbar-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #344767;
+  font-weight: 500;
+}
+
+
+.client-navbar-profile span {
+  font-size: 14px;
+}

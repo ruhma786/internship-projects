@@ -1,0 +1,423 @@
+/* =====================================================
+   CLIENT RECENT UPDATES
+===================================================== */
+
+.client-recent-updates {
+    width: 100%;
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border: 1px solid #e7ebf2;
+    border-radius: 16px;
+
+    padding: 26px 28px;
+
+    box-shadow: 0 5px 18px rgba(20, 35, 60, 0.06);
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.client-updates-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #edf0f5;
+}
+
+
+.client-section-label {
+    display: inline-block;
+
+    margin-bottom: 7px;
+
+    color: #52709d;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 0.9px;
+}
+
+
+.client-updates-header h2 {
+    margin: 0;
+
+    color: #172b4d;
+
+    font-size: 21px;
+    font-weight: 700;
+}
+
+
+.client-updates-header p {
+    margin: 7px 0 0;
+
+    color: #7a8799;
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   UPDATES LIST
+===================================================== */
+
+.client-updates-list {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 10px 0;
+}
+
+
+/* =====================================================
+   TIMELINE LINE
+===================================================== */
+
+.client-updates-list::before {
+    content: "";
+
+    position: absolute;
+
+    top: 30px;
+    bottom: 30px;
+
+    left: 22px;
+
+    width: 2px;
+
+    background: #e8edf4;
+}
+
+
+/* =====================================================
+   UPDATE ITEM
+===================================================== */
+
+.client-update-item {
+    position: relative;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 18px;
+
+    padding: 17px 8px;
+
+    border-radius: 12px;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.client-update-item:hover {
+    background: #f8fafd;
+
+    transform: translateX(2px);
+}
+
+
+/* =====================================================
+   UPDATE ICON
+===================================================== */
+
+.client-update-icon {
+    position: relative;
+    z-index: 2;
+
+    flex: 0 0 44px;
+
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    font-size: 16px;
+
+    border: 3px solid #ffffff;
+
+    box-shadow: 0 2px 8px rgba(20, 35, 60, 0.08);
+}
+
+
+/* =====================================================
+   ICON TYPES
+===================================================== */
+
+.client-update-icon.ticket {
+    background: #eaf2ff;
+    color: #2563eb;
+}
+
+
+.client-update-icon.success {
+    background: #eaf8ef;
+    color: #16a34a;
+}
+
+
+.client-update-icon.manager {
+    background: #f2ecff;
+    color: #7c3aed;
+}
+
+
+.client-update-icon.progress {
+    background: #fff4df;
+    color: #d97706;
+}
+
+
+.client-update-icon.info {
+    background: #eaf8fb;
+    color: #0891b2;
+}
+
+
+.client-update-icon.resolved {
+    background: #e9f8ef;
+    color: #15803d;
+}
+
+
+/* =====================================================
+   UPDATE CONTENT
+===================================================== */
+
+.client-update-content {
+    flex: 1;
+
+    min-width: 0;
+
+    padding-top: 2px;
+}
+
+
+/* =====================================================
+   TITLE + TIME
+===================================================== */
+
+.client-update-title-row {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.client-update-title-row strong {
+    color: #263b5b;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    line-height: 1.4;
+}
+
+
+.client-update-title-row span {
+    flex-shrink: 0;
+
+    color: #98a2b3;
+
+    font-size: 11px;
+    font-weight: 500;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.client-update-content p {
+    margin: 6px 0 0;
+
+    max-width: 850px;
+
+    color: #6f7d91;
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.client-updates-footer {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 8px;
+
+    padding-top: 17px;
+
+    border-top: 1px solid #edf0f5;
+
+    color: #8995a7;
+
+    font-size: 11px;
+}
+
+
+.client-updates-footer svg {
+    color: #52709d;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .client-recent-updates {
+        padding: 22px;
+    }
+
+    .client-update-item {
+        gap: 15px;
+    }
+
+    .client-update-title-row {
+        align-items: flex-start;
+        flex-direction: column;
+
+        gap: 3px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .client-recent-updates {
+        padding: 18px;
+
+        border-radius: 13px;
+    }
+
+
+    .client-updates-header h2 {
+        font-size: 18px;
+    }
+
+
+    .client-updates-header p {
+        font-size: 12px;
+    }
+
+
+    .client-updates-list::before {
+        left: 19px;
+    }
+
+
+    .client-update-item {
+        gap: 13px;
+
+        padding: 14px 3px;
+    }
+
+
+    .client-update-icon {
+        flex: 0 0 38px;
+
+        width: 38px;
+        height: 38px;
+
+        border-radius: 10px;
+
+        font-size: 14px;
+    }
+
+
+    .client-update-title-row strong {
+        font-size: 13px;
+    }
+
+
+    .client-update-title-row span {
+        font-size: 10px;
+    }
+
+
+    .client-update-content p {
+        font-size: 12px;
+
+        line-height: 1.5;
+    }
+
+
+    .client-updates-footer {
+        align-items: flex-start;
+
+        font-size: 10px;
+
+        line-height: 1.5;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .client-recent-updates {
+        padding: 15px;
+    }
+
+
+    .client-update-item {
+        gap: 10px;
+    }
+
+
+    .client-update-icon {
+        flex-basis: 34px;
+
+        width: 34px;
+        height: 34px;
+
+        font-size: 12px;
+    }
+
+
+    .client-updates-list::before {
+        left: 17px;
+    }
+
+}

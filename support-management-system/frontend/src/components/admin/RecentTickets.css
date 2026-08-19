@@ -1,0 +1,732 @@
+/* =========================================================
+   RECENT TICKETS
+   Professional Support Management Dashboard
+========================================================= */
+
+.recent-tickets-card {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #e7ebf2;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(15, 35, 70, 0.06);
+    margin: 0;
+}
+
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.recent-section-header {
+    width: 100%;
+    min-height: 115px;
+    padding: 26px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    background: #ffffff;
+    border-bottom: 1px solid #edf0f5;
+    box-sizing: border-box;
+}
+
+
+.recent-header-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.recent-section-label {
+    display: inline-block;
+    width: fit-content;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    color: #2563eb;
+    text-transform: uppercase;
+}
+
+
+.recent-section-header h2 {
+    margin: 0;
+    color: #17365f;
+    font-size: 25px;
+    font-weight: 750;
+    line-height: 1.2;
+}
+
+
+.recent-section-header p {
+    margin: 0;
+    color: #8290a6;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   VIEW ALL BUTTON
+========================================================= */
+
+.view-all-btn {
+    border: none;
+    outline: none;
+    background: #17365f;
+    color: #ffffff;
+    min-height: 44px;
+    padding: 0 18px;
+    border-radius: 9px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.view-all-btn svg {
+    font-size: 12px;
+    transition: transform 0.25s ease;
+}
+
+
+.view-all-btn:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(37, 99, 235, 0.22);
+}
+
+
+.view-all-btn:hover svg {
+    transform: translateX(4px);
+}
+
+
+.view-all-btn:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+
+.recent-tickets-heading {
+    width: 100%;
+    min-height: 48px;
+    padding: 0 30px;
+
+    display: grid;
+
+    /*
+       Ticket | Subject | Priority | Status | Date | Action
+    */
+    grid-template-columns:
+        1.25fr
+        2.5fr
+        0.85fr
+        1.25fr
+        1fr
+        0.7fr;
+
+    align-items: center;
+    column-gap: 20px;
+
+    background: #f8fafc;
+    border-bottom: 1px solid #e8edf3;
+    box-sizing: border-box;
+}
+
+
+.recent-tickets-heading span {
+    color: #74839a;
+    font-size: 11px;
+    font-weight: 750;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   TICKET LIST
+========================================================= */
+
+.recent-tickets-list {
+    width: 100%;
+}
+
+
+/* =========================================================
+   TICKET ROW
+========================================================= */
+
+.recent-ticket-row {
+    width: 100%;
+    min-height: 88px;
+    padding: 17px 30px;
+
+    display: grid;
+
+    grid-template-columns:
+        1.25fr
+        2.5fr
+        0.85fr
+        1.25fr
+        1fr
+        0.7fr;
+
+    align-items: center;
+    column-gap: 20px;
+
+    background: #ffffff;
+    border-bottom: 1px solid #edf0f4;
+
+    box-sizing: border-box;
+
+    transition:
+        background 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.recent-ticket-row:last-child {
+    border-bottom: none;
+}
+
+
+.recent-ticket-row:hover {
+    background: #f8fbff;
+    box-shadow: inset 4px 0 0 #2563eb;
+}
+
+
+/* =========================================================
+   TICKET ID + CLIENT
+========================================================= */
+
+.recent-ticket-id {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    min-width: 0;
+}
+
+
+.ticket-icon-box {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: #eef4ff;
+    color: #2563eb;
+
+    font-size: 16px;
+}
+
+
+.recent-ticket-id > div:last-child {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+
+.recent-ticket-id strong {
+    color: #17365f;
+    font-size: 14px;
+    font-weight: 750;
+    white-space: nowrap;
+}
+
+
+.recent-ticket-id span {
+    color: #8794a8;
+    font-size: 12px;
+    font-weight: 500;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   SUBJECT
+========================================================= */
+
+.recent-ticket-subject {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.recent-ticket-subject h3 {
+    margin: 0;
+
+    color: #253b5b;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.4;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.recent-ticket-subject span {
+    color: #9aa6b8;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   PRIORITY BADGES
+========================================================= */
+
+.ticket-priority {
+    width: fit-content;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 28px;
+    padding: 0 11px;
+
+    border-radius: 999px;
+
+    font-size: 11px;
+    font-weight: 750;
+
+    white-space: nowrap;
+}
+
+
+/* High */
+
+.ticket-priority.high {
+    color: #dc2626;
+    background: #fee2e2;
+    border: 1px solid #fecaca;
+}
+
+
+/* Medium */
+
+.ticket-priority.medium {
+    color: #d97706;
+    background: #fef3c7;
+    border: 1px solid #fde68a;
+}
+
+
+/* Low */
+
+.ticket-priority.low {
+    color: #2563eb;
+    background: #dbeafe;
+    border: 1px solid #bfdbfe;
+}
+
+
+/* =========================================================
+   STATUS BADGES
+========================================================= */
+
+.ticket-status {
+    width: fit-content;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    min-height: 28px;
+    padding: 0 11px;
+
+    border-radius: 999px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+.ticket-status svg {
+    font-size: 10px;
+}
+
+
+/* Pending Review */
+
+.ticket-status.pending-review {
+    color: #b77900;
+    background: #fff4d6;
+    border: 1px solid #ffe5a3;
+}
+
+
+/* In Progress */
+
+.ticket-status.in-progress {
+    color: #2563eb;
+    background: #e8f1ff;
+    border: 1px solid #cfe0ff;
+}
+
+
+.ticket-status.in-progress svg {
+    animation: ticketSpin 1.4s linear infinite;
+}
+
+
+/* Resolved */
+
+.ticket-status.resolved {
+    color: #15803d;
+    background: #dcfce7;
+    border: 1px solid #bbf7d0;
+}
+
+
+/* Rejected */
+
+.ticket-status.rejected {
+    color: #dc2626;
+    background: #fee2e2;
+    border: 1px solid #fecaca;
+}
+
+
+/* =========================================================
+   DATE
+========================================================= */
+
+.ticket-date {
+    color: #718198;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   VIEW BUTTON
+========================================================= */
+
+.recent-view-btn {
+    width: 74px;
+    min-height: 36px;
+
+    border: 1px solid #d9e1ec;
+    border-radius: 8px;
+
+    background: #ffffff;
+    color: #31557f;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.recent-view-btn:hover {
+    background: #17365f;
+    color: #ffffff;
+    border-color: #17365f;
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   SPINNER ANIMATION
+========================================================= */
+
+@keyframes ticketSpin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .recent-section-header {
+        padding: 23px 24px;
+    }
+
+
+    .recent-tickets-heading {
+        padding: 0 24px;
+
+        grid-template-columns:
+            1.2fr
+            2fr
+            0.8fr
+            1.15fr
+            0.9fr
+            0.65fr;
+
+        column-gap: 14px;
+    }
+
+
+    .recent-ticket-row {
+        padding: 16px 24px;
+
+        grid-template-columns:
+            1.2fr
+            2fr
+            0.8fr
+            1.15fr
+            0.9fr
+            0.65fr;
+
+        column-gap: 14px;
+    }
+
+
+    .ticket-icon-box {
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+    }
+
+
+    .recent-ticket-id {
+        gap: 9px;
+    }
+
+
+    .recent-ticket-subject h3 {
+        font-size: 13px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+
+    .recent-tickets-card {
+        border-radius: 14px;
+    }
+
+
+    /* Header */
+
+    .recent-section-header {
+        padding: 22px 18px;
+
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
+    .recent-section-header h2 {
+        font-size: 21px;
+    }
+
+
+    .recent-section-header p {
+        font-size: 13px;
+    }
+
+
+    .view-all-btn {
+        width: 100%;
+    }
+
+
+    /* Hide table heading */
+
+    .recent-tickets-heading {
+        display: none;
+    }
+
+
+    /* Turn rows into cards */
+
+    .recent-ticket-row {
+        padding: 20px 18px;
+
+        display: grid;
+
+        grid-template-columns: 1fr auto;
+
+        grid-template-areas:
+
+            "ticket priority"
+            "subject subject"
+            "status date"
+            "action action";
+
+        gap: 14px;
+
+        align-items: center;
+    }
+
+
+    /* Ticket */
+
+    .recent-ticket-id {
+        grid-area: ticket;
+    }
+
+
+    .recent-ticket-id strong {
+        font-size: 13px;
+    }
+
+
+    .recent-ticket-id span {
+        font-size: 11px;
+    }
+
+
+    /* Priority */
+
+    .ticket-priority {
+        grid-area: priority;
+        justify-self: end;
+    }
+
+
+    /* Subject */
+
+    .recent-ticket-subject {
+        grid-area: subject;
+    }
+
+
+    .recent-ticket-subject h3 {
+        font-size: 14px;
+        white-space: normal;
+    }
+
+
+    /* Status */
+
+    .ticket-status {
+        grid-area: status;
+        justify-self: start;
+    }
+
+
+    /* Date */
+
+    .ticket-date {
+        grid-area: date;
+        justify-self: end;
+    }
+
+
+    /* View */
+
+    .recent-view-btn {
+        grid-area: action;
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+
+    .recent-section-header {
+        padding: 20px 15px;
+    }
+
+
+    .recent-ticket-row {
+        padding: 18px 15px;
+    }
+
+
+    .ticket-icon-box {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+
+        border-radius: 9px;
+
+        font-size: 14px;
+    }
+
+
+    .recent-ticket-id {
+        gap: 9px;
+    }
+
+
+    .recent-ticket-id strong {
+        font-size: 12px;
+    }
+
+
+    .recent-ticket-id span {
+        max-width: 130px;
+    }
+
+
+    .ticket-priority,
+    .ticket-status {
+        font-size: 10px;
+        padding: 0 8px;
+    }
+
+
+    .ticket-date {
+        font-size: 10px;
+    }
+
+}

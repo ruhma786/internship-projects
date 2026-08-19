@@ -1,0 +1,132 @@
+/* ================================
+   MAIN PROJECT MANAGER DASHBOARD
+================================ */
+
+.project-manager-dashboard {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f6f8;
+  font-family: "Poppins", sans-serif;
+}
+
+
+/* ================================
+   MAIN CONTENT AREA
+================================ */
+
+.project-manager-main {
+  margin-left: 260px;
+  width: calc(100% - 260px);
+  min-height: 100vh;
+}
+
+
+/* ================================
+   DASHBOARD CONTENT
+================================ */
+
+.project-manager-content {
+  padding: 30px 35px 50px;
+}
+
+
+/* ================================
+   DASHBOARD HEADING
+================================ */
+
+.dashboard-heading {
+  margin-bottom: 25px;
+}
+
+
+.dashboard-heading p {
+  color: #8a94a6;
+  font-size: 13px;
+  margin: 0 0 5px;
+}
+
+
+.dashboard-heading h1 {
+  color: #26364d;
+  font-size: 25px;
+  margin: 0;
+  font-weight: 600;
+}
+
+
+/* ================================
+   STATISTICS GRID
+================================ */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+
+/* ================================
+   RECENT TICKETS
+================================ */
+
+.project-manager-content .recent-tickets-card {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+
+/* ================================
+   RESPONSIVE - 1200px
+================================ */
+
+@media (max-width: 1200px) {
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* ================================
+   RESPONSIVE - 768px
+================================ */
+
+@media (max-width: 768px) {
+
+  .project-manager-sidebar {
+    width: 220px;
+  }
+
+  .project-manager-main {
+    margin-left: 220px;
+    width: calc(100% - 220px);
+  }
+
+  .project-manager-content {
+    padding: 20px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* ================================
+   RESPONSIVE - 600px
+================================ */
+
+@media (max-width: 600px) {
+
+  .project-manager-content {
+    padding: 15px;
+  }
+
+  .dashboard-heading h1 {
+    font-size: 22px;
+  }
+
+}
