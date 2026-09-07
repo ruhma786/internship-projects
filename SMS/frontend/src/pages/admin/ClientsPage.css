@@ -1,0 +1,1753 @@
+/* =========================================================
+   CLIENTS PAGE
+========================================================= */
+
+.clients-page {
+  padding: 28px 34px 48px;
+  color: #44464d;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   COMMON FLEX
+========================================================= */
+
+.clients-header,
+.clients-directory-head,
+.clients-toolbar,
+.client-workspace > header,
+.client-workspace-actions,
+.client-workspace-heading,
+.client-note-composer footer {
+  display: flex;
+  align-items: center;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.clients-header {
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.clients-header p,
+.clients-directory-head > div > span,
+.client-panel-heading > span,
+.client-workspace-heading > div > span,
+.client-health > span {
+  margin: 0 0 8px;
+  color: #74808d;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+}
+
+.clients-header p i {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 7px;
+  border-radius: 50%;
+  background: #c1282a;
+}
+
+.clients-header h1,
+.client-workspace h1 {
+  margin: 0;
+  color: #0b091b;
+  font-family: Raleway, Arial, sans-serif;
+  font-size: 28px;
+}
+
+.clients-header > span,
+.clients-header span {
+  display: block;
+  margin-top: 8px;
+  color: #74808d;
+  font-size: 13px;
+}
+
+.clients-header > button {
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 8px;
+  background: linear-gradient(
+    180deg,
+    #c1282a 0%,
+    #850002 100%
+  );
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.clients-header > button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(193, 40, 42, 0.18);
+}
+
+
+/* =========================================================
+   OVERVIEW STRIP
+========================================================= */
+
+.clients-overview {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  overflow: hidden;
+  margin-bottom: 24px;
+  border: 2px solid #e6e8ed;
+  border-radius: 13px;
+  background: #fff;
+}
+
+.clients-overview div {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  min-height: 104px;
+  padding: 18px 22px;
+  border-right: 1px solid #e6e8ed;
+  box-sizing: border-box;
+}
+
+.clients-overview div:last-child {
+  border-right: 0;
+}
+
+.clients-overview b {
+  color: #1d2735;
+  font-size: 26px;
+  line-height: 1;
+}
+
+.clients-overview span {
+  color: #74808d;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.clients-overview em {
+  position: absolute;
+  right: 22px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 52px;
+  padding: 7px 10px;
+  border-radius: 7px;
+  background: #e7f6ed;
+  color: #238851;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.clients-overview em.amber {
+  background: #fff4df;
+  color: #c57b0b;
+}
+
+.clients-overview em.purple {
+  background: #f0ebff;
+  color: #7958cc;
+}
+
+
+/* =========================================================
+   CLIENT DIRECTORY
+========================================================= */
+
+.clients-directory {
+  padding: 23px;
+  border: 2px solid #e6e8ed;
+  border-radius: 13px;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.clients-directory-head {
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.clients-directory-head h2,
+.client-panel-heading h2,
+.client-health h2 {
+  margin: 0;
+  color: #1d2735;
+  font-size: 18px;
+}
+
+.clients-directory-head p {
+  margin: 6px 0 0;
+  color: #74808d;
+  font-size: 12px;
+}
+
+.clients-directory-head > b {
+  color: #74808d;
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   TOOLBAR
+========================================================= */
+
+.clients-toolbar {
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 15px;
+}
+
+.clients-toolbar label {
+  height: 38px;
+  min-width: 290px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 11px;
+  border: 1px solid #dedfe4;
+  border-radius: 8px;
+  color: #89919b;
+  box-sizing: border-box;
+}
+
+.clients-toolbar label span {
+  color: #74808d;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.clients-toolbar input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #1d2735;
+  font: inherit;
+  font-size: 12px;
+}
+
+.clients-toolbar input::placeholder {
+  color: #a0a6ad;
+}
+
+.clients-toolbar select {
+  height: 38px;
+  padding: 0 27px 0 10px;
+  border: 1px solid #dedfe4;
+  border-radius: 8px;
+  background: #fff;
+  color: #3f4a58;
+  font-size: 11px;
+  font-weight: 700;
+  outline: none;
+}
+
+
+/* =========================================================
+   ACTIVE FILTER
+========================================================= */
+
+.clients-active-filter {
+  margin: -3px 0 14px;
+  padding: 9px 11px;
+  border: 1px solid #dce9f7;
+  border-radius: 8px;
+  background: #f8fbff;
+  color: #3566cf;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.clients-active-filter button {
+  margin-left: 10px;
+  border: 0;
+  background: transparent;
+  color: #a81418;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.clients-table-card {
+  overflow: hidden;
+  border: 1px solid #e6e8ed;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.clients-scroll {
+  overflow-x: auto;
+}
+
+.clients-table-card table {
+  width: 100%;
+  min-width: 1000px;
+  border-collapse: collapse;
+}
+
+.clients-table-card th {
+  padding: 11px 13px;
+  background: #fafafb;
+  color: #74808d;
+  font-size: 9px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.clients-table-card td {
+  padding: 13px;
+  border-top: 1px solid #edf0f2;
+  vertical-align: middle;
+  font-size: 11px;
+}
+
+.clients-table-card tr {
+  transition: 0.18s ease;
+}
+
+.clients-table-card tr:hover td {
+  background: #fffafa;
+}
+
+.clients-table-card input[type="checkbox"] {
+  accent-color: #c1282a;
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   CLIENT PERSON
+========================================================= */
+
+.client-person,
+.client-team {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.client-person > i,
+.client-workspace-heading > i,
+.client-team > i {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.client-person > div,
+.client-contact,
+.client-team > div {
+  display: grid;
+  gap: 3px;
+}
+
+.client-person b,
+.client-contact b,
+.client-team b {
+  color: #303945;
+  font-size: 12px;
+}
+
+.client-person span,
+.client-contact span,
+.client-team span {
+  color: #89919b;
+  font-size: 9px;
+}
+
+
+/* =========================================================
+   AVATAR TONES
+========================================================= */
+
+.client-person > i.red,
+.client-workspace-heading > i.red {
+  background: #c1282a;
+}
+
+.client-person > i.blue,
+.client-workspace-heading > i.blue,
+.client-team > i.blue {
+  background: #3566cf;
+}
+
+.client-person > i.green,
+.client-workspace-heading > i.green {
+  background: #2ca398;
+}
+
+.client-person > i.amber,
+.client-workspace-heading > i.amber {
+  background: #d28b18;
+}
+
+.client-person > i.teal,
+.client-workspace-heading > i.teal {
+  background: #2ca398;
+}
+
+.client-workspace-heading > i.purple,
+.client-team > i.purple {
+  background: #8054d9;
+}
+
+
+/* =========================================================
+   TABLE STATUS
+========================================================= */
+
+.client-id {
+  color: #a81418;
+  font-size: 11px;
+}
+
+.client-open {
+  display: grid;
+  width: 27px;
+  height: 27px;
+  place-items: center;
+  border-radius: 50%;
+  background: #e7f6ed;
+  color: #238851;
+  font-size: 11px;
+}
+
+.client-open.high {
+  background: #fff0dd;
+  color: #c57b0b;
+}
+
+.client-status {
+  display: inline-block;
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: #f0f2f4;
+  color: #65707b;
+  font-size: 9px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.client-status.active {
+  background: #e7f6ed;
+  color: #238851;
+}
+
+.client-status.inactive {
+  background: #eff1f3;
+  color: #73808d;
+}
+
+
+/* =========================================================
+   VIEW BUTTON
+========================================================= */
+
+.client-view {
+  padding: 7px 10px;
+  border: 1px solid #efd2d3;
+  border-radius: 7px;
+  background: #fffafa;
+  color: #a81418;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.client-view:hover {
+  background: #c1282a;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   TABLE FOOTER
+========================================================= */
+
+.clients-table-card footer {
+  padding: 11px 14px;
+  color: #74808d;
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   BULK ACTION
+========================================================= */
+
+.clients-bulk {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+  padding: 10px 12px;
+  border: 1px solid #eadedf;
+  border-radius: 9px;
+  background: #fffafa;
+  font-size: 11px;
+}
+
+.clients-bulk > b {
+  margin-right: auto;
+}
+
+.clients-bulk button {
+  padding: 7px 9px;
+  border: 0;
+  border-radius: 6px;
+  background: #fff;
+  color: #a81418;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   ⭐ CLIENT WORKSPACE BACKGROUND / OVERLAY
+========================================================= */
+
+/*
+   IMPORTANT:
+
+   Ye outer shell workspace ke peeche wala background
+   control karta hai.
+
+   backdrop-filter = background blur
+
+   rgba(...) = background darkness
+
+   Blur increase karna ho:
+   blur(4px) -> blur(6px) -> blur(8px)
+
+   Background darkness increase karni ho:
+   0.32 -> 0.40 -> 0.48
+*/
+
+.client-workspace-shell {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  background: rgba(11, 9, 27, 0.34);
+
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   ⭐ CLIENT WORKSPACE SIZE
+========================================================= */
+
+/*
+   ⭐⭐ CHANGE SIZE HERE ⭐⭐
+
+   Workspace WIDTH:
+
+   1400px = bigger
+   1300px = medium
+   1200px = smaller
+
+   Workspace HEIGHT:
+
+   92vh = taller
+   88vh = medium
+   82vh = smaller
+
+   Agar baad mein workspace increase/decrease karna ho
+   TO SIRF YE 2 VALUES CHANGE KARNA.
+*/
+
+.client-workspace {
+
+  /* ⭐ WORKSPACE WIDTH — CHANGE THIS */
+  --client-workspace-width: 1380px;
+
+  /* ⭐ WORKSPACE HEIGHT — CHANGE THIS */
+  --client-workspace-height: 90vh;
+
+  width: min(
+    var(--client-workspace-width),
+    100%
+  );
+
+  height: var(--client-workspace-height);
+
+  max-height: 94vh;
+
+  margin: 0;
+
+  padding: 24px 28px 34px;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  color: #44464d;
+
+  text-align: left;
+
+  box-sizing: border-box;
+
+  border: 1px solid rgba(230, 232, 237, 0.95);
+
+  border-radius: 16px;
+
+  background: #f8f9fb;
+
+  box-shadow:
+    0 25px 70px rgba(11, 9, 27, 0.22),
+    0 8px 25px rgba(11, 9, 27, 0.10);
+
+  animation: clientWorkspaceIn 0.22s ease;
+}
+
+
+/* =========================================================
+   WORKSPACE OPEN ANIMATION
+========================================================= */
+
+@keyframes clientWorkspaceIn {
+
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+}
+
+
+/* =========================================================
+   WORKSPACE SCROLLBAR
+========================================================= */
+
+.client-workspace::-webkit-scrollbar {
+  width: 7px;
+}
+
+.client-workspace::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.client-workspace::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #d5d9df;
+}
+
+.client-workspace::-webkit-scrollbar-thumb:hover {
+  background: #b9bec7;
+}
+
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.client-back {
+  margin-bottom: 18px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #a81418;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.client-back:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   WORKSPACE HEADER
+========================================================= */
+
+.client-workspace > header {
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 18px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #e6e8ed;
+}
+
+.client-workspace-heading {
+  gap: 12px;
+}
+
+.client-workspace-heading > i {
+  width: 48px;
+  height: 48px;
+  font-size: 13px;
+}
+
+.client-workspace-heading h1 {
+  font-size: 26px;
+}
+
+.client-workspace-heading p {
+  margin: 4px 0 0;
+  color: #74808d;
+  font-size: 11px;
+}
+
+.client-workspace-actions {
+  position: relative;
+  gap: 8px;
+}
+
+.client-workspace-actions > .client-status {
+  padding: 6px 10px;
+}
+
+
+/* =========================================================
+   STATUS ACTION
+========================================================= */
+
+.client-status-action {
+  padding: 8px 11px;
+  border: 1px solid #efd2d3;
+  border-radius: 7px;
+  background: #fffafa;
+  color: #a81418;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.client-status-action:hover {
+  background: #c1282a;
+  color: #fff;
+}
+
+
+/* =========================================================
+   MORE BUTTON
+========================================================= */
+
+.client-more-wrapper {
+  position: relative;
+}
+
+.client-more-button {
+  width: 34px;
+  height: 34px;
+  border: 1px solid #e2e4e8;
+  border-radius: 8px;
+  background: #fff;
+  color: #56606c;
+  font-size: 19px;
+  line-height: 1;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.client-more-button:hover {
+  border-color: #c1282a;
+  color: #c1282a;
+}
+
+
+/* =========================================================
+   MORE MENU
+========================================================= */
+
+.client-more-menu {
+  position: absolute;
+  z-index: 20;
+  top: 42px;
+  right: 0;
+  width: 175px;
+  padding: 6px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 14px 30px rgba(11, 9, 27, 0.12);
+}
+
+.client-more-menu button {
+  width: 100%;
+  padding: 9px 10px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #3f4a58;
+  text-align: left;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.client-more-menu button:hover {
+  background: #fff5f5;
+  color: #a81418;
+}
+
+
+/* =========================================================
+   NOTICE
+========================================================= */
+
+.client-notice {
+  display: flex;
+  justify-content: space-between;
+  margin: -2px 0 15px;
+  padding: 10px 12px;
+  border: 1px solid #cae8d7;
+  border-radius: 8px;
+  background: #f1faf5;
+  color: #238851;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.client-notice button {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   READ ONLY BANNER
+========================================================= */
+
+.client-read-only {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  padding: 11px 13px;
+  border: 1px solid #e2e6ee;
+  border-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    #fafbfc,
+    #fff
+  );
+}
+
+.client-read-only-icon {
+  width: 25px;
+  height: 25px;
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 50%;
+  background: #e7f6ed;
+  color: #238851;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.client-read-only div {
+  display: grid;
+  gap: 2px;
+}
+
+.client-read-only strong {
+  color: #303945;
+  font-size: 11px;
+}
+
+.client-read-only span:not(.client-read-only-icon) {
+  color: #7b8591;
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   WORKSPACE GRID
+========================================================= */
+
+.client-workspace-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.55fr)
+    minmax(280px, 0.62fr);
+
+  gap: 22px;
+}
+
+.client-workspace-grid main {
+  display: grid;
+  gap: 18px;
+}
+
+.client-workspace-grid aside {
+  display: grid;
+  align-content: start;
+  gap: 18px;
+}
+
+
+/* =========================================================
+   PANEL
+========================================================= */
+
+.client-panel {
+  padding: 20px;
+  border: 1px solid #e6e8ed;
+  border-radius: 13px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(11, 9, 27, 0.02);
+}
+
+.client-panel-heading {
+  margin-bottom: 17px;
+}
+
+.client-panel-heading h2 {
+  font-size: 17px;
+}
+
+
+/* =========================================================
+   READ ONLY PROFILE
+========================================================= */
+
+.client-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.client-readonly-field {
+  display: grid;
+  gap: 5px;
+  padding: 11px 12px;
+  border: 1px solid #edf0f2;
+  border-radius: 8px;
+  background: #fafbfc;
+}
+
+.client-readonly-field span {
+  color: #89919b;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.client-readonly-field b {
+  color: #3f4a58;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   SUPPORT OVERVIEW
+========================================================= */
+
+.client-support-overview {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  overflow: hidden;
+  border: 1px solid #e8eaee;
+  border-radius: 10px;
+}
+
+.client-support-overview div {
+  display: grid;
+  gap: 5px;
+  padding: 14px;
+  border-right: 1px solid #e8eaee;
+}
+
+.client-support-overview div:last-child {
+  border-right: 0;
+}
+
+.client-support-overview strong {
+  color: #1d2735;
+  font-size: 21px;
+}
+
+.client-support-overview span {
+  color: #74808d;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+
+/* =========================================================
+   ACTIVITY TABS
+========================================================= */
+
+.client-activity-tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 10px;
+  padding: 4px;
+  border-radius: 8px;
+  background: #f7f8fa;
+}
+
+.client-activity-tabs button {
+  padding: 7px 10px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #74808d;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.client-activity-tabs button:hover {
+  color: #a81418;
+}
+
+.client-activity-tabs button.active {
+  background: #fff;
+  color: #a81418;
+  box-shadow: 0 2px 7px rgba(11, 9, 27, 0.07);
+}
+
+
+/* =========================================================
+   ACTIVITY
+========================================================= */
+
+.client-activity-list {
+  display: grid;
+}
+
+.client-activity {
+  display: grid;
+  grid-template-columns: 100px minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+  padding: 11px 0;
+  border-top: 1px solid #edf0f2;
+}
+
+.client-activity b {
+  color: #a81418;
+  font-size: 10px;
+}
+
+.client-activity span {
+  color: #3f4a58;
+  font-size: 11px;
+}
+
+.client-activity em {
+  color: #238851;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.client-empty-state {
+  padding: 25px 10px;
+  color: #89919b;
+  text-align: center;
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   INTERNAL NOTES
+========================================================= */
+
+.client-note {
+  display: flex;
+  gap: 9px;
+  padding: 11px 0;
+  border-top: 1px solid #edf0f2;
+}
+
+.client-note > i {
+  width: 27px;
+  height: 27px;
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 50%;
+  background: #c1282a;
+  color: #fff;
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.client-note b {
+  color: #303945;
+  font-size: 11px;
+}
+
+.client-note p {
+  margin: 4px 0 0;
+  color: #59616c;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   NOTE COMPOSER
+========================================================= */
+
+.client-note-composer {
+  margin-top: 10px;
+  padding: 11px;
+  border: 1px solid #e2e4e8;
+  border-radius: 9px;
+  background: #fbfbfc;
+}
+
+.client-note-composer textarea {
+  width: 100%;
+  min-height: 65px;
+  border: 0;
+  outline: 0;
+  resize: vertical;
+  background: transparent;
+  color: #1d2735;
+  font: inherit;
+  font-size: 11px;
+  box-sizing: border-box;
+}
+
+.client-note-composer textarea::placeholder {
+  color: #a0a6ad;
+}
+
+.client-note-composer footer {
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.client-note-composer footer span {
+  color: #89919b;
+  font-size: 9px;
+}
+
+.client-note-composer button {
+  padding: 8px 11px;
+  border: 0;
+  border-radius: 7px;
+  background: linear-gradient(
+    180deg,
+    #c1282a,
+    #850002
+  );
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   ACCOUNT HEALTH / STATUS
+========================================================= */
+
+.client-health h2 {
+  margin: 4px 0 7px;
+}
+
+.client-health p {
+  margin: 0;
+  color: #74808d;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.client-status-summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  padding: 10px;
+  border-radius: 8px;
+  background: #fafbfc;
+}
+
+.client-status-summary strong {
+  color: #3f4a58;
+  font-size: 11px;
+}
+
+.client-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.client-status-dot.active {
+  background: #2ca398;
+  box-shadow: 0 0 0 4px #e8f7f3;
+}
+
+.client-status-dot.inactive {
+  background: #9ba3ad;
+  box-shadow: 0 0 0 4px #f0f1f3;
+}
+
+.client-status-inline {
+  width: 100%;
+  margin-top: 10px;
+  padding: 8px 10px;
+  border: 1px solid #efd2d3;
+  border-radius: 7px;
+  background: #fffafa;
+  color: #a81418;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.client-status-inline:hover {
+  background: #c1282a;
+  color: #fff;
+}
+
+
+/* =========================================================
+   SNAPSHOT
+========================================================= */
+
+.client-panel dl {
+  margin: 0;
+}
+
+.client-panel dl > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 9px 0;
+  border-top: 1px solid #edf0f2;
+}
+
+.client-panel dt {
+  color: #74808d;
+  font-size: 10px;
+}
+
+.client-panel dd {
+  margin: 0;
+  color: #3f4a58;
+  font-size: 10px;
+  font-weight: 700;
+  text-align: right;
+}
+
+
+/* =========================================================
+   SUPPORT TEAM
+========================================================= */
+
+.client-team {
+  padding: 10px 0;
+  border-top: 1px solid #edf0f2;
+}
+
+.client-team a {
+  margin-left: auto;
+  color: #a81418;
+  font-size: 10px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.client-team a:hover {
+  text-decoration: underline;
+}
+
+.client-unassigned {
+  margin-left: auto;
+  color: #9ba3ad;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   ADMIN PERMISSIONS
+========================================================= */
+
+.client-permissions .client-panel-heading {
+  margin-bottom: 12px;
+}
+
+.permission-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 0;
+  border-top: 1px solid #edf0f2;
+}
+
+.permission-item span {
+  color: #59616c;
+  font-size: 10px;
+}
+
+.permission-item b {
+  padding: 4px 7px;
+  border-radius: 999px;
+  background: #e7f6ed;
+  color: #238851;
+  font-size: 8px;
+  text-transform: uppercase;
+}
+
+.permission-item.disabled b {
+  background: #f0f1f3;
+  color: #8b939c;
+}
+
+
+/* =========================================================
+   STATUS MODAL OVERLAY
+========================================================= */
+
+.client-modal-overlay {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+
+  display: grid;
+  place-items: center;
+
+  padding: 20px;
+
+  background: rgba(11, 9, 27, 0.38);
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   STATUS MODAL
+========================================================= */
+
+.client-status-modal {
+  width: min(460px, 100%);
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+
+  gap: 14px;
+
+  padding: 23px;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 15px;
+
+  background: #fff;
+
+  box-shadow: 0 25px 60px rgba(11, 9, 27, 0.18);
+
+  box-sizing: border-box;
+
+  animation: clientModalIn 0.2s ease;
+}
+
+@keyframes clientModalIn {
+
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+}
+
+.client-modal-icon {
+  width: 39px;
+  height: 39px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 11px;
+
+  background: #fff0f0;
+  color: #c1282a;
+
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.client-modal-label {
+  color: #74808d;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.client-status-modal h2 {
+  margin: 4px 0 7px;
+  color: #0b091b;
+  font-family: Raleway, Arial, sans-serif;
+  font-size: 20px;
+}
+
+.client-status-modal p {
+  margin: 0;
+  color: #59616c;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.client-status-modal small {
+  display: block;
+  margin-top: 8px;
+  color: #89919b;
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.client-modal-actions {
+  grid-column: 1 / -1;
+
+  display: flex;
+  justify-content: flex-end;
+
+  gap: 8px;
+
+  margin-top: 5px;
+  padding-top: 15px;
+
+  border-top: 1px solid #edf0f2;
+}
+
+.client-modal-cancel,
+.client-modal-confirm {
+  padding: 8px 12px;
+  border-radius: 7px;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.client-modal-cancel {
+  border: 1px solid #dedfe4;
+  background: #fff;
+  color: #59616c;
+}
+
+.client-modal-confirm {
+  border: 0;
+  color: #fff;
+}
+
+.client-modal-confirm.activate {
+  background: linear-gradient(
+    180deg,
+    #299766,
+    #19784d
+  );
+}
+
+.client-modal-confirm.deactivate {
+  background: linear-gradient(
+    180deg,
+    #c1282a,
+    #850002
+  );
+}
+
+.client-modal-cancel:hover {
+  background: #f7f8fa;
+}
+
+
+/* =========================================================
+   RESPONSIVE — 1200px
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .clients-overview {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .clients-overview div:nth-child(3) {
+    border-right: 0;
+  }
+
+  .client-workspace-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .client-workspace-grid aside {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 900px
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .clients-page {
+    padding: 24px;
+  }
+
+  /* ⭐ Workspace smaller screens par almost full width */
+  .client-workspace-shell {
+    padding: 16px;
+  }
+
+  .client-workspace {
+    width: 100%;
+    height: 92vh;
+    padding: 22px;
+  }
+
+  .client-support-overview {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .client-support-overview div:nth-child(2) {
+    border-right: 0;
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 700px
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .clients-page {
+    padding: 20px 18px 35px;
+  }
+
+  .client-workspace-shell {
+    padding: 10px;
+  }
+
+  .client-workspace {
+    height: 95vh;
+    padding: 18px;
+    border-radius: 12px;
+  }
+
+  .clients-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .client-workspace > header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .clients-header h1 {
+    font-size: 25px;
+  }
+
+  .clients-header > button {
+    align-self: flex-start;
+  }
+
+  .clients-overview {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .clients-overview div {
+    border-bottom: 1px solid #e6e8ed;
+  }
+
+  .clients-overview div:nth-child(2) {
+    border-right: 0;
+  }
+
+  .clients-directory {
+    padding: 17px;
+  }
+
+  .clients-toolbar label {
+    min-width: 100%;
+  }
+
+  .clients-bulk {
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+
+  .clients-bulk > b {
+    width: 100%;
+  }
+
+  .client-workspace-grid aside {
+    grid-template-columns: 1fr;
+  }
+
+  .client-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .client-support-overview {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .client-support-overview div:nth-child(2) {
+    border-right: 0;
+  }
+
+  .client-note-composer footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .client-activity {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .client-workspace-actions {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .client-read-only {
+    align-items: flex-start;
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 500px
+========================================================= */
+
+@media (max-width: 500px) {
+
+  .client-workspace-shell {
+    padding: 0;
+  }
+
+  .client-workspace {
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+  }
+
+  .clients-overview {
+    grid-template-columns: 1fr;
+  }
+
+  .clients-overview div {
+    border-right: 0;
+  }
+
+  .client-support-overview {
+    grid-template-columns: 1fr;
+  }
+
+  .client-support-overview div {
+    border-right: 0;
+    border-bottom: 1px solid #e8eaee;
+  }
+
+  .client-support-overview div:last-child {
+    border-bottom: 0;
+  }
+
+  .client-activity-tabs {
+    overflow-x: auto;
+  }
+
+  .client-activity-tabs button {
+    white-space: nowrap;
+  }
+
+  .client-status-modal {
+    grid-template-columns: 1fr;
+  }
+
+  .client-modal-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .client-modal-actions {
+    justify-content: stretch;
+  }
+
+  .client-modal-actions button {
+    flex: 1;
+  }
+
+}

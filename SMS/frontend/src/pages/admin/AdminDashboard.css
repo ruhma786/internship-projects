@@ -1,0 +1,90 @@
+ /* ================================
+    ADMIN DASHBOARD MAIN LAYOUT
+================================ */
+
+.admin-dashboard {
+  min-height: 100vh;
+  width: 100%;
+  background: #ffffff;
+}
+
+/* Sidebar width = 64px */
+
+.admin-main {
+  margin-left: 64px;
+  width: calc(100% - 64px);
+  min-height: 100vh;
+  background: #ffffff;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* Topbar ke neeche dashboard */
+
+.admin-dashboard-content {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* =================================
+   RECENT ACTIVITY + TEAM WORKLOAD
+================================= */
+
+.admin-activity-workload-row {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.45fr)
+    minmax(360px, 1fr);
+
+  /* Increased separation between both sections */
+  gap: 80px;
+
+  padding: 20px 34px 40px;
+
+  box-sizing: border-box;
+
+  align-items: start;
+}
+
+/* =================================
+   LARGE SCREENS
+================================= */
+
+@media (min-width: 1500px) {
+  .admin-activity-workload-row {
+    padding-right: 42px;
+    padding-left: 42px;
+
+    /* Slightly more separation on large screens */
+    gap: 88px;
+  }
+}
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 1200px) {
+  .admin-activity-workload-row {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+}
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 700px) {
+  .admin-activity-workload-row {
+    padding: 18px;
+
+    gap: 30px;
+  }
+}

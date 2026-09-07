@@ -1,0 +1,221 @@
+/* =========================================
+   RECENT ACTIVITY SECTION
+========================================= */
+
+.recent-activity {
+  width: 100%;
+  min-width: 0;
+  padding-right: 10px;
+}
+
+/* =========================================
+   TITLE
+========================================= */
+
+.recent-activity-title {
+  margin: 0 0 18px;
+
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+
+  color: #74808d;
+}
+
+/* =========================================
+   TIMELINE
+========================================= */
+
+.activity-timeline {
+  position: relative;
+
+  /* Empty left space reduced */
+  padding-left: 18px;
+
+  width: 100%;
+}
+
+/* Timeline line */
+
+.activity-timeline::before {
+  content: "";
+
+  position: absolute;
+
+  left: 4px;
+  top: 8px;
+  bottom: 8px;
+
+  width: 1px;
+
+  background: #e2e5ea;
+
+  border-radius: 10px;
+}
+
+/* =========================================
+   ACTIVITY ITEM
+========================================= */
+
+.recent-activity-item {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  /* Activity aur time ke darmiyan small gap */
+  gap: 18px;
+
+  min-height: 50px;
+
+  padding: 3px 0;
+
+  width: fit-content;
+
+  transition: transform 0.2s ease;
+}
+
+.recent-activity-item:hover {
+  transform: translateX(3px);
+}
+
+/* =========================================
+   TIMELINE DOT
+========================================= */
+
+.activity-dot {
+  position: absolute;
+
+  left: -18px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+
+  border: 2px solid #ffffff;
+
+  box-sizing: border-box;
+
+  z-index: 2;
+
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04);
+}
+
+/* =========================================
+   DOT COLORS
+========================================= */
+
+.activity-dot.green {
+  background: #3c956c;
+}
+
+.activity-dot.blue {
+  background: #4a70b8;
+}
+
+.activity-dot.amber {
+  background: #dc9b34;
+}
+
+.activity-dot.purple {
+  background: #775fc0;
+}
+
+.activity-dot.red {
+  background: #bd3c38;
+}
+
+.activity-dot.gray {
+  background: #9ba3ad;
+}
+
+/* =========================================
+   ACTIVITY TEXT
+========================================= */
+.activity-text {
+  min-width: 0;
+
+  font-size: 13.5px;
+  font-weight: 400;
+
+  line-height: 1.35;
+
+  color: #1d2735;
+
+  white-space: nowrap;
+}
+
+.activity-text strong {
+  color: #1d2735;
+  font-weight: 700;
+}
+
+/* =========================================
+   TIME
+========================================= */
+
+.activity-time {
+  color: #7c8794;
+
+  font-size: 11.5px;
+  font-weight: 500;
+
+  white-space: nowrap;
+
+  text-align: left;
+}
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .recent-activity {
+    padding-right: 0;
+  }
+
+  .recent-activity-title {
+    margin-bottom: 16px;
+    font-size: 14px;
+  }
+
+  .activity-timeline {
+    padding-left: 18px;
+  }
+
+  .activity-timeline::before {
+    left: 4px;
+  }
+
+  .activity-dot {
+    left: -18px;
+  }
+  .recent-activity-item {
+  gap: 10px;
+  min-height: 45px;
+  width: 100%;
+}
+
+.activity-text {
+  font-size: 14px;
+  white-space: normal;
+}
+
+.activity-time {
+  font-size: 12px;
+}
+}
+
+@media (max-width: 500px) {
+  .recent-activity-item {
+  grid-template-columns: 1fr;
+}
+  .activity-time {
+    display: none;
+  }
+}

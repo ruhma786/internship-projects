@@ -1,0 +1,936 @@
+/* =========================================
+   DASHBOARD MAIN
+========================================= */
+
+.dashboard-content {
+  width: 100%;
+  min-height: calc(100vh - 80px);
+
+  padding: 26px 34px 40px;
+
+  box-sizing: border-box;
+  background: #ffffff;
+}
+
+
+/* =========================================
+   TOP ROW
+========================================= */
+.dashboard-top-row {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(360px, 0.8fr);
+
+  gap: 42px;
+
+  align-items: start;
+
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid #eceef2;
+}
+
+/* =========================================
+   LEFT SUMMARY
+========================================= */
+
+.dashboard-summary {
+  min-width: 0;
+}
+
+
+/* =========================================
+   BIG METRIC
+========================================= */
+
+.metric-big {
+  display: flex;
+  align-items: center;
+
+  gap: 28px;
+
+  min-height: 125px;
+}
+
+
+.metric-number {
+  font-size: clamp(76px, 7vw, 118px);
+  line-height: 0.85;
+
+  font-weight: 800;
+  letter-spacing: -6px;
+
+  color: #111326;
+
+  flex-shrink: 0;
+}
+
+
+.metric-meta {
+  padding-top: 5px;
+}
+
+
+.metric-tag {
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  color: #6f7884;
+
+  margin-bottom: 10px;
+}
+
+
+.greeting {
+  font-size: 25px;
+
+  font-weight: 700;
+
+  color: #182235;
+
+  margin-bottom: 7px;
+}
+
+
+.metric-sub {
+  font-size: 16px;
+
+  color: #707b89;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   INDICATORS
+========================================= */
+
+.dashboard-indicators {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 22px;
+
+  margin-top: 30px;
+
+  padding-bottom: 6px;
+}
+
+
+.dashboard-indicator {
+  min-width: 0;
+}
+
+
+.indicator-number {
+  font-size: 20px;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  margin-bottom: 7px;
+}
+
+
+.indicator-label {
+  font-size: 11px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.1px;
+
+  color: #6e7782;
+
+  white-space: nowrap;
+}
+
+
+.indicator-blue .indicator-number {
+  color: #4269b2;
+}
+
+
+.indicator-purple .indicator-number {
+  color: #7562bd;
+}
+
+
+.indicator-red .indicator-number {
+  color: #ae3737;
+}
+
+
+.indicator-amber .indicator-number {
+  color: #c88a31;
+}
+
+
+/* =========================================
+   NEEDS ATTENTION
+========================================= */
+
+.needs-attention {
+  width: 100%;
+  min-width: 0;
+}
+
+.attention-title {
+  font-size: 21px;
+
+  font-weight: 750;
+
+  color: #172237;
+
+  margin: 0 0 10px;
+}
+
+
+
+.attention-item {
+  min-height: 58px;
+
+  display: grid;
+
+  grid-template-columns: 44px minmax(0, 1fr) 24px;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 7px 0 7px 14px;
+
+  margin-bottom: 2px;
+
+  position: relative;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.attention-item:hover {
+  background: #fafbfc;
+
+  transform: translateX(3px);
+}
+
+.attention-item::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 3px;
+  bottom: 3px;
+
+  width: 3px;
+
+  border-radius: 3px;
+}
+
+
+.attention-blue::before {
+  background: #4269b2;
+}
+
+
+.attention-red::before {
+  background: #b23838;
+}
+
+
+.attention-amber::before {
+  background: #d49331;
+}
+
+
+.attention-purple::before {
+  background: #7562bd;
+}
+
+
+.attention-number {
+  font-size: 22px;
+
+  font-weight: 800;
+
+  line-height: 1;
+}
+
+
+.attention-blue .attention-number {
+  color: #4269b2;
+}
+
+
+.attention-red .attention-number {
+  color: #b23838;
+}
+
+
+.attention-amber .attention-number {
+  color: #d49331;
+}
+
+
+.attention-purple .attention-number {
+  color: #7562bd;
+}
+
+
+.attention-text {
+  min-width: 0;
+}
+.attention-main {
+  font-size: 15px;
+
+  font-weight: 700;
+
+  color: #1d2738;
+
+  margin-bottom: 3px;
+}
+
+.attention-sub {
+  font-size: 12px;
+
+  color: #74808d;
+}
+.attention-arrow {
+  font-size: 18px;
+
+  color: #7a838c;
+
+  text-align: right;
+}
+
+.attention-item:hover .attention-arrow {
+  transform: translateX(4px);
+}
+
+
+/* =========================================
+   BOTTOM ROW
+========================================= */
+
+.dashboard-bottom-row {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.65fr)
+    minmax(360px, 0.95fr);
+
+  gap: 36px;
+
+  align-items: stretch;
+
+  margin-top: 20px;
+}
+
+/* =========================================
+   LIVE PIPELINE
+========================================= */
+
+.pipeline-compact,
+.health-section {
+  min-height: 330px;
+  height: 330px;
+}
+.pipeline-compact {
+  
+  padding: 28px 30px 24px;
+
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f8f9fb,
+      #eef1f6
+    );
+
+  border: 1px solid #e6e9ef;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+
+  box-shadow:
+    0 8px 24px rgba(25, 35, 55, 0.04);
+}
+
+
+.pipeline-head {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  gap: 20px;
+}
+
+
+.pipeline-eyebrow {
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  color: #74808d;
+
+  margin-bottom: 6px;
+}
+
+
+.pipeline-head h2 {
+  margin: 0;
+
+  font-size: 20px;
+
+  font-weight: 750;
+
+  color: #182235;
+}
+
+
+.pipeline-head h2 span {
+  font-size: 14px;
+
+  font-weight: 500;
+
+  color: #74808d;
+}
+
+
+.view-all-btn {
+  border: none;
+
+  background: transparent;
+
+  color: #a53535;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  padding: 4px 0;
+
+  white-space: nowrap;
+
+  transition: transform 0.2s ease;
+}
+
+
+.view-all-btn:hover {
+  transform: translateX(3px);
+}
+
+.attention-item {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.attention-item:hover {
+  transform: translateX(4px);
+  background: #f7f8fa;
+}
+
+
+/* =========================================
+   FLOW RAIL
+========================================= */
+
+.flow-rail {
+  flex: 1;
+
+  min-height: 225px;
+
+  display: grid;
+
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+
+  gap: 14px;
+
+  align-items: end;
+
+  margin-top: 18px;
+}
+
+
+.flow-stage {
+  min-width: 0;
+
+  height: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  position: relative;
+}
+
+
+.flow-number {
+  font-size: 23px;
+
+  font-weight: 800;
+
+  margin-bottom: 9px;
+
+  line-height: 1;
+}
+
+
+.flow-bar {
+  width: 100%;
+
+  max-width: 110px;
+
+  min-width: 30px;
+
+  border-radius: 12px 12px 6px 6px;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+}
+
+
+.flow-label {
+  font-size: 12px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+
+  color: #687482;
+
+  margin-top: 10px;
+
+  text-align: center;
+
+  white-space: nowrap;
+}
+
+
+.flow-chevron {
+  position: absolute;
+
+  right: -11px;
+
+  bottom: 6px;
+
+  color: #b7bec7;
+
+  font-size: 22px;
+}
+
+
+/* FLOW COLORS */
+
+.flow-blue {
+  color: #4269b2;
+}
+
+.flow-purple {
+  color: #7562bd;
+}
+
+.flow-amber {
+  color: #ca8b30;
+}
+
+.flow-light-purple {
+  color: #8d75c4;
+}
+
+.flow-green {
+  color: #348d63;
+}
+
+.flow-gray {
+  color: #7e8792;
+}
+
+
+.bg-blue {
+  background: #496fb8;
+}
+
+.bg-purple {
+  background: #765fc4;
+}
+
+.bg-amber {
+  background: #efa735;
+}
+
+.bg-light-purple {
+  background: #9078c5;
+}
+
+.bg-green {
+  background: #4ca574;
+}
+
+.bg-gray {
+  background: #8e969f;
+}
+
+
+/* =========================================
+   HEALTH DISTRIBUTION
+========================================= */
+
+.health-section {
+  padding: 24px 26px;
+
+  border-radius: 22px;
+
+  background: #ffffff;
+
+  border: 1px solid #e7eaf0;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.health-title {
+  font-size: 16px;
+
+  margin-bottom: 16px;
+}
+
+.health-wrap {
+  flex: 1;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 34px;
+}
+
+
+/* =========================================
+   DONUT
+========================================= */
+
+.health-donut {
+  width: 164px;
+  height: 164px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background:
+    conic-gradient(
+      #496fb8 0deg 84deg,
+      #efa735 84deg 131deg,
+      #765fc4 131deg 160deg,
+      #3e9a6b 160deg 298deg,
+      #8e969f 298deg 360deg
+    );
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+
+.health-donut::before {
+  content: "";
+
+  width: 112px;
+  height: 112px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  position: absolute;
+}
+
+
+.donut-center {
+  position: relative;
+
+  z-index: 2;
+
+  text-align: center;
+}
+
+
+.donut-number {
+  font-size: 32px;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  color: #182235;
+}
+
+
+.donut-label {
+  margin-top: 5px;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.4px;
+
+  color: #78838f;
+}
+
+
+/* =========================================
+   HEALTH LEGEND
+========================================= */
+
+.health-legend {
+  flex: 1;
+
+  min-width: 170px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 13px;
+}
+
+
+.health-item {
+  display: grid;
+
+  grid-template-columns: 12px 1fr auto;
+
+  align-items: center;
+
+  gap: 9px;
+
+  font-size: 15px;
+
+  color: #4d5866;
+}
+
+
+.health-item strong {
+  font-size: 15px;
+
+  color: #1b2637;
+}
+
+
+.health-dot {
+  width: 10px;
+  height: 10px;
+
+  border-radius: 3px;
+}
+
+
+.dot-blue {
+  background: #496fb8;
+}
+
+.dot-amber {
+  background: #efa735;
+}
+
+.dot-purple {
+  background: #765fc4;
+}
+
+.dot-green {
+  background: #3e9a6b;
+}
+
+.dot-gray {
+  background: #8e969f;
+}
+
+
+/* =========================================
+   LARGE SCREEN
+========================================= */
+
+@media (min-width: 1500px) {
+
+  .dashboard-content {
+    padding-left: 42px;
+    padding-right: 42px;
+  }
+
+  .dashboard-top-row {
+    grid-template-columns:
+      minmax(0, 1.75fr)
+      minmax(470px, 0.9fr);
+  }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1200px) {
+
+  .dashboard-top-row {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-bottom-row {
+    grid-template-columns: 1fr;
+  }
+
+  .health-section {
+    min-height: 300px;
+  }
+
+}
+
+
+@media (max-width: 900px) {
+
+  .dashboard-content {
+    padding: 22px;
+  }
+
+  .dashboard-indicators {
+    gap: 14px;
+  }
+
+  .flow-rail {
+    gap: 8px;
+  }
+
+  .health-wrap {
+    justify-content: flex-start;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .dashboard-content {
+    padding: 18px;
+  }
+
+
+  .metric-big {
+    gap: 18px;
+  }
+
+
+  .metric-number {
+    font-size: 74px;
+  }
+
+
+  .greeting {
+    font-size: 21px;
+  }
+
+
+  .metric-sub {
+    font-size: 14px;
+  }
+
+
+  .dashboard-indicators {
+    grid-template-columns: repeat(2, 1fr);
+
+    row-gap: 22px;
+  }
+
+
+  .attention-title {
+    font-size: 21px;
+  }
+
+
+  .attention-main {
+    font-size: 15px;
+  }
+
+
+  .attention-sub {
+    font-size: 13px;
+  }
+
+
+  .dashboard-bottom-row {
+    gap: 22px;
+  }
+
+
+  .pipeline-compact,
+  .health-section {
+    padding: 22px 18px;
+  }
+
+
+  .flow-rail {
+    overflow-x: auto;
+
+    grid-template-columns: repeat(6, 85px);
+
+    padding-bottom: 8px;
+  }
+
+
+  .health-wrap {
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+
+  .health-legend {
+    width: 100%;
+
+    max-width: 300px;
+  }
+
+}

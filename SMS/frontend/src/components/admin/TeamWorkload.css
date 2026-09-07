@@ -1,0 +1,311 @@
+/* =========================================
+   TEAM WORKLOAD
+========================================= */
+
+.team-workload {
+  width: 100%;
+  min-width: 0;
+  padding: 0 8px;
+
+  text-align: left;
+  box-sizing: border-box;
+}
+
+/* =========================================
+   TITLE
+========================================= */
+
+.team-workload .team-workload-title {
+  margin: 0 0 28px;
+
+  color: #687585;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  text-align: left;
+}
+
+/* =========================================
+   TEAM LIST
+========================================= */
+
+.team-workload .team-workload-list {
+  display: grid;
+  gap: 24px;
+}
+
+/* =========================================
+   TEAM MEMBER
+========================================= */
+
+.team-workload .team-member {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr) 78px;
+
+  align-items: center;
+  gap: 14px;
+
+  width: 100%;
+}
+
+/* =========================================
+   AVATAR
+========================================= */
+
+.team-workload .team-avatar {
+  display: grid;
+  place-items: center;
+
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+
+  box-sizing: border-box;
+}
+
+.team-workload .team-avatar.blue {
+  background: #365fa8 !important;
+}
+
+.team-workload .team-avatar.purple {
+  background: #7653bd !important;
+}
+
+.team-workload .team-avatar.red {
+  background: #d4870b !important;
+}
+
+.team-workload .team-avatar.amber {
+  background: #278560 !important;
+}
+
+.team-workload .team-avatar.green {
+  background: #3a8f8f !important;
+}
+
+/* =========================================
+   MEMBER DETAILS
+========================================= */
+
+.team-workload .team-member-details {
+  min-width: 0;
+}
+
+.team-workload .team-member-details h3,
+.team-workload .team-member-details p {
+  margin: 0;
+}
+
+.team-workload .team-member-details h3 {
+  color: #202a38;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.team-workload .team-member-details p {
+  margin-top: 3px;
+
+  color: #6f7b89;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.team-workload .team-member-details p span {
+  padding: 0 3px;
+}
+
+/* =========================================
+   WORKLOAD BAR
+========================================= */
+
+.team-workload .workload-track {
+  width: 100%;
+  height: 6px;
+
+  margin-top: 10px;
+
+  overflow: hidden;
+  border-radius: 999px;
+
+  background: #dfe3e9;
+}
+
+.team-workload .workload-fill {
+  display: block;
+  height: 100%;
+
+  border-radius: inherit;
+}
+
+.team-workload .workload-fill.blue,
+.team-workload .workload-fill.purple,
+.team-workload .workload-fill.amber {
+  background: #d99027;
+}
+
+.team-workload .workload-fill.red {
+  background: #c94d48;
+}
+
+.team-workload .workload-fill.green {
+  background: #338d62;
+}
+
+/* =========================================
+   LOAD / ROLE
+========================================= */
+
+.team-workload .team-member-load {
+  display: grid;
+
+  justify-items: end;
+  align-items: center;
+
+  gap: 4px;
+
+  min-width: 78px;
+
+  /* Global class conflicts remove */
+  background: transparent !important;
+  padding: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.team-workload .team-member-load strong {
+  display: block;
+
+  margin: 0;
+  padding: 0;
+
+  background: transparent !important;
+
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.team-workload .team-member-load span {
+  display: inline-block;
+
+  padding: 3px 10px;
+
+  border-radius: 999px;
+
+  background: #e9eaf2 !important;
+
+  color: #536fa8;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+.team-workload .team-member-load.blue strong,
+.team-workload .team-member-load.purple strong,
+.team-workload .team-member-load.amber strong {
+  color: #d08b28;
+}
+
+.team-workload .team-member-load.red strong {
+  color: #c94d48;
+}
+
+.team-workload .team-member-load.green strong {
+  color: #338d62;
+}
+
+/* =========================================
+   SUMMARY
+========================================= */
+
+.team-workload .team-workload-summary {
+  display: flex;
+  gap: 42px;
+
+  margin-top: 28px;
+  padding-top: 22px;
+
+  border-top: 1px solid #dde1e6;
+}
+
+.team-workload .team-workload-summary div {
+  display: grid;
+  gap: 5px;
+}
+
+.team-workload .team-workload-summary strong {
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.team-workload .team-workload-summary strong.amber {
+  color: #d08b28;
+}
+
+.team-workload .team-workload-summary strong.blue {
+  color: #365fa8;
+}
+
+.team-workload .team-workload-summary strong.green {
+  color: #338d62;
+}
+
+.team-workload .team-workload-summary span {
+  color: #6f7b89;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .team-workload .team-member {
+    grid-template-columns: 46px minmax(0, 1fr) 65px;
+    gap: 10px;
+  }
+
+  .team-workload .team-avatar {
+    width: 46px;
+    height: 46px;
+    font-size: 12px;
+  }
+
+  .team-workload .team-member-details h3 {
+    font-size: 15px;
+  }
+
+  .team-workload .team-member-details p {
+    font-size: 12px;
+  }
+
+  .team-workload .team-member-load strong {
+    font-size: 16px;
+  }
+
+  .team-workload .team-member-load span {
+    padding: 3px 7px;
+    font-size: 10px;
+  }
+
+  .team-workload .team-workload-summary {
+    gap: 25px;
+  }
+}

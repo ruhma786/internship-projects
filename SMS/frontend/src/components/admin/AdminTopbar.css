@@ -1,0 +1,389 @@
+/* =================================
+   ADMIN TOPBAR
+================================= */
+
+.admin-topbar {
+  width: calc(100% - 64px);
+  min-height: 82px;
+
+  margin-left: 64px;
+
+  padding: 20px 32px 16px 32px;
+
+  background: #ffffff;
+  border-bottom: 1px solid #ebebef;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+
+  position: relative;
+  z-index: 100;
+}
+
+
+/* =================================
+   LEFT SIDE
+================================= */
+
+.admin-topbar-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  min-width: 0;
+}
+
+
+/* Small workspace text */
+
+.admin-eyebrow {
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  color: #a0a1a7;
+
+  line-height: 1.4;
+}
+
+
+/* Main heading */
+
+.admin-topbar-left h1 {
+  margin: 0;
+
+  color: #0b091b;
+
+  font-family: "Raleway", sans-serif;
+
+  font-size: 22px;
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.02em;
+}
+
+
+/* =================================
+   RIGHT SIDE
+================================= */
+
+.admin-topbar-right {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  flex-shrink: 0;
+}
+
+
+/* =================================
+   SEARCH
+================================= */
+
+.admin-search {
+  height: 34px;
+
+  min-width: 225px;
+
+  padding: 0 8px 0 11px;
+
+  border: 1px solid #e7e7eb;
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  color: #9b9ca2;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 11px;
+
+  cursor: text;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.admin-search:hover {
+  border-color: #d5d5da;
+}
+
+
+.admin-search:focus-within {
+  border-color: #c1282a;
+
+  box-shadow: 0 0 0 3px rgba(193, 40, 42, 0.08);
+}
+
+
+.admin-search svg {
+  flex-shrink: 0;
+}
+
+
+/* Search placeholder */
+
+.admin-search > span:not(.admin-search-kbd) {
+  white-space: nowrap;
+}
+
+
+/* =================================
+   KEYBOARD SHORTCUT
+================================= */
+
+.admin-search-kbd {
+  margin-left: auto;
+
+  padding: 3px 5px;
+
+  border: 1px solid #e2e2e6;
+  border-radius: 4px;
+
+  background: #f8f8fa;
+
+  color: #9b9ca2;
+
+  font-size: 8px;
+
+  white-space: nowrap;
+}
+
+
+/* =================================
+   NEW TICKET BUTTON
+================================= */
+
+.admin-new-ticket {
+  height: 38px;
+
+  padding: 0 13px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: linear-gradient(
+    180deg,
+    #c1282a,
+    #850002
+  );
+
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow: 0 5px 12px rgba(133, 0, 2, 0.15);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.admin-new-ticket:hover {
+  transform: translateY(-1px);
+
+  box-shadow: 0 7px 16px rgba(133, 0, 2, 0.22);
+}
+
+
+.admin-new-ticket:active {
+  transform: translateY(0);
+}
+
+
+/* =================================
+   NOTIFICATION BUTTON
+================================= */
+
+.admin-notification-btn {
+  width: 35px;
+  height: 40px;
+
+  border: 1px solid #e7e7eb;
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  color: #777981;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+
+.admin-notification-btn:hover {
+  background: #f8f8fa;
+
+  border-color: #d9d9de;
+
+  color: #0b091b;
+}
+
+
+/* Notification red dot */
+
+.admin-notification-dot {
+  position: absolute;
+
+  width: 8px;
+  height: 8px;
+
+  top: 6px;
+  right: 6px;
+
+  background: #c1282a;
+
+  border: 1.5px solid #ffffff;
+
+  border-radius: 50%;
+}
+.admin-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.admin-search input {
+  width: 180px;
+
+  border: none;
+  outline: none;
+  background: transparent;
+
+  color: #1d2735;
+  font-size: 13px;
+}
+
+.admin-search input::placeholder {
+  color: #8a94a3;
+}
+
+.admin-search-kbd {
+  pointer-events: none;
+}
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 900px) {
+
+  .admin-topbar {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .admin-search {
+    min-width: 180px;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .admin-topbar {
+    min-height: 70px;
+
+    padding: 14px 16px;
+
+    align-items: center;
+  }
+
+  .admin-topbar-left h1 {
+    font-size: 18px;
+  }
+
+  .admin-eyebrow {
+    font-size: 8px;
+  }
+
+  .admin-search {
+    min-width: 34px;
+    width: 34px;
+
+    padding: 0;
+
+    justify-content: center;
+  }
+
+  .admin-search > span {
+    display: none;
+  }
+
+  .admin-search-kbd {
+    display: none !important;
+  }
+
+  .admin-new-ticket {
+    width: 34px;
+
+    padding: 0;
+  }
+
+  .admin-new-ticket svg {
+    margin: 0;
+  }
+
+  .admin-new-ticket {
+    font-size: 0;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .admin-topbar {
+    margin-left: 64px;
+
+    width: calc(100% - 64px);
+
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .admin-topbar-left h1 {
+    font-size: 16px;
+  }
+
+  .admin-eyebrow {
+    display: none;
+  }
+
+  .admin-topbar-right {
+    gap: 6px;
+  }
+
+}

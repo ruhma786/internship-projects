@@ -1,0 +1,7 @@
+export const enquiries = [
+  { id: "ENQ-10482", client: "Sarah Ahmed", company: "Acme Solutions", initials: "SA", avatar: "purple", subject: "Website integration issue", category: "Technical support", priority: "High", submitted: "24 Aug, 10:42 AM", time: "2m ago", status: "Awaiting Review", reviewer: "Unassigned" },
+  { id: "ENQ-10479", client: "Michael Khan", company: "NovaTech", initials: "MK", avatar: "blue", subject: "Unable to access account", category: "Login & authentication", priority: "Medium", submitted: "24 Aug, 10:31 AM", time: "11m ago", status: "More Information", reviewer: "Admin" },
+  { id: "ENQ-10476", client: "Fatima Ali", company: "BrightEdge", initials: "FA", avatar: "green", subject: "Monthly billing discrepancy", category: "Billing & payments", priority: "Low", submitted: "24 Aug, 10:08 AM", time: "34m ago", status: "Converted to Ticket", reviewer: "Admin" },
+  { id: "ENQ-10471", client: "Omar Raza", company: "Vertex Group", initials: "OR", avatar: "amber", subject: "Request for service upgrade", category: "Account services", priority: "Medium", submitted: "24 Aug, 09:42 AM", time: "1h ago", status: "Converted to Ticket", reviewer: "Admin" },
+  { id: "ENQ-10463", client: "Leila Noor", company: "Orbit Systems", initials: "LN", avatar: "teal", subject: "Unrelated promotional request", category: "Outside support scope", priority: "Low", submitted: "24 Aug, 08:54 AM", time: "2h ago", status: "Rejected / Closed", reviewer: "Admin" },
+];

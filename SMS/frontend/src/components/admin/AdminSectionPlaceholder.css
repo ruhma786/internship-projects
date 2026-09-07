@@ -1,0 +1,30 @@
+.admin-section-placeholder {
+  min-height: calc(100vh - 80px);
+  padding: 34px;
+  background: #fff;
+}
+
+.admin-section-placeholder-eyebrow {
+  margin: 0 0 10px;
+  color: #c1282a;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.admin-section-placeholder h1 {
+  margin: 0;
+  color: #1d2735;
+  font-size: 28px;
+}
+
+.admin-section-placeholder > p:last-child {
+  margin: 10px 0 0;
+  color: #74808d;
+  font-size: 15px;
+}
+
+@media (max-width: 700px) {
+  .admin-section-placeholder { padding: 22px 18px; }
+}

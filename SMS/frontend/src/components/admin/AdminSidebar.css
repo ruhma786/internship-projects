@@ -1,0 +1,323 @@
+/* ================================
+   ADMIN SIDEBAR
+================================ */
+
+.admin-sidebar {
+  width: 64px;
+  height: 100vh;
+
+  background: #ffffff;
+  border-right: 1px solid #ebebef;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 18px 0 20px 0;
+
+  z-index: 1000;
+}
+
+
+/* ================================
+   LOGO
+================================ */
+
+.admin-logo {
+  width: 34px;
+  height: 34px;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    180deg,
+    #c1282a,
+    #850002
+  );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 26px;
+
+  flex-shrink: 0;
+
+  box-shadow: 0 6px 14px rgba(133, 0, 2, 0.18);
+}
+
+.admin-logo span {
+  color: #ffffff;
+  font-size: 17px;
+  line-height: 1;
+}
+
+
+/* ================================
+   NAVIGATION
+================================ */
+
+.admin-sidebar-nav {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 6px;
+
+  flex: 1;
+}
+
+
+/* ================================
+   SIDEBAR ITEM
+================================ */
+
+.admin-sidebar-item {
+  width: 38px;
+  height: 38px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #8a8d93;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  position: relative;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+/* Icon */
+
+.admin-sidebar-item svg {
+  width: 18px;
+  height: 18px;
+
+  display: block;
+}
+
+
+/* ================================
+   HOVER
+================================ */
+
+.admin-sidebar-item:hover {
+  background: #f7f8fa;
+  color: #0b091b;
+
+  transform: translateX(1px);
+}
+
+
+/* ================================
+   ACTIVE ITEM
+================================ */
+
+.admin-sidebar-item.active {
+  background: #fceaea;
+  color: #c1282a;
+}
+
+
+/* Red active indicator */
+
+.admin-sidebar-item.active::before {
+  content: "";
+
+  position: absolute;
+
+  left: -13px;
+  top: 9px;
+  bottom: 9px;
+
+  width: 3px;
+
+  background: linear-gradient(
+    180deg,
+    #c1282a,
+    #850002
+  );
+
+  border-radius: 2px;
+}
+
+
+/* ================================
+   SMALL NOTIFICATION DOT
+================================ */
+
+.notification-dot {
+  position: absolute;
+
+  top: 5px;
+  right: 5px;
+
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #c1282a;
+
+  border: 1.5px solid #ffffff;
+}
+
+
+/* ================================
+   NOTIFICATION NUMBER BADGE
+================================ */
+
+.notification-badge {
+  position: absolute;
+
+  top: 1px;
+  right: 0;
+
+  min-width: 14px;
+  height: 14px;
+
+  padding: 0 3px;
+
+  border-radius: 8px;
+
+  background: #c1282a;
+
+  color: #ffffff;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1.5px solid #ffffff;
+
+  line-height: 1;
+}
+
+
+/* ================================
+   ADMIN AVATAR
+================================ */
+
+.admin-avatar {
+  width: 32px;
+  height: 32px;
+
+  border-radius: 50%;
+
+  flex-shrink: 0;
+
+  background: linear-gradient(
+    160deg,
+    #c1282a,
+    #850002
+  );
+
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Raleway", sans-serif;
+
+  font-weight: 700;
+  font-size: 12px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.admin-avatar:hover {
+  transform: scale(1.05);
+
+  box-shadow: 0 5px 12px rgba(133, 0, 2, 0.25);
+}
+
+
+/* ================================
+   TOOLTIP
+   Name appears when mouse is
+   placed over the icon
+================================ */
+
+.admin-sidebar-item::after {
+  content: attr(title);
+
+  position: absolute;
+
+  left: 52px;
+  top: 50%;
+
+  transform: translateY(-50%) translateX(-4px);
+
+  background: #0b091b;
+  color: #ffffff;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  padding: 6px 9px;
+
+  border-radius: 6px;
+
+  white-space: nowrap;
+
+  opacity: 0;
+  visibility: hidden;
+
+  pointer-events: none;
+
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease;
+
+  z-index: 2000;
+}
+
+.admin-sidebar-item:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%) translateX(0);
+}
+
+@media (max-height: 600px) {
+
+  .admin-sidebar {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .admin-logo {
+    margin-bottom: 14px;
+  }
+
+  .admin-sidebar-nav {
+    gap: 3px;
+  }
+
+}

@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+}
+
+.admin-dashboard {
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+.admin-main {
+  margin-left: 64px;
+  min-height: 100vh;
+}
+
+.admin-dashboard-content {
+  padding: 32px;
+}
+
+.admin-dashboard-content h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+  color: #0b091b;
+}
+
+.admin-dashboard-content p {
+  color: #777981;
+}
